@@ -193,7 +193,6 @@ nav ul li:before{
 
 .headercontenedor{
     background-color: #2d3799;
-    justify-self: center;
 }
 
 .contenedorinicio{
@@ -311,12 +310,13 @@ footer{
 background-color: #201235;
 }
 
-.contenedoranimacionfooter{
+/* .contenedoranimacionfooter{
 /*     background-color: yellow; */
-}
+/* } */
 
 .contenedortextofooter{
 /*     background-color: violet; */
+padding-top: 2vw;
     color: #FFF4E6;
     display: flex;
     justify-content: center;
