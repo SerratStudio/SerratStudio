@@ -1,0 +1,617 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+    text-decoration: none !important;
+}
+
+@font-face{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/Montserrat-VariableFont_wght.ttf')
+}
+
+/*-------- INDEX ANIMATION --------*/
+
+/*-------- BARRA MENU --------*/
+
+
+body{
+    background-color: #201235;
+    perspective: 1px;
+
+}
+
+header{
+    background-color: #201235;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    padding: 2vw;
+}
+
+.logomenu{
+    height: 3vw;
+    padding: 0 2vw;
+}
+
+.logomenu:hover{
+    filter: brightness(150%);
+    transition: all 0.5s ease;
+
+}
+
+nav{
+    display: flex;
+    height: 6vw;
+    list-style: none;
+    justify-content: right;
+    align-items: center;
+    color: white;
+
+}
+
+nav ul{
+    float: left;
+    justify-content: center;
+}
+
+nav ul li {
+    width: 10vw;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    font-size: larger;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin: 0 3vw 0 0;
+    cursor: pointer;
+    border: 1px solid #ffa912;
+    border-radius: 10vw;
+}
+
+nav li a{
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+nav ul li:hover:before{
+    top: 0;
+    border-radius: 0;
+}
+
+nav ul li:before{
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffa912;
+    border-radius: 100% 100% 0 0;
+    z-index: 1;
+    transition: all .7s;
+}
+
+/* HAMBURGUESA */
+
+.nav-bar-hamburguer{
+    display: none;
+}
+
+.logomenu2{
+    width: 6vw;
+}
+
+.contenedorimagenmenu{
+    justify-content: right;
+    align-items: center;
+    display: flex;
+}
+
+.imagenmenu{
+    width: 5vw;
+}
+
+.imagenmenu:hover {
+    filter: brightness(150%);
+    transition: all 0.5s ease;
+}
+
+.botonesmenu{
+    width: 30vw;
+    display: block;
+    font-size: large;
+    text-align: center;
+    text-decoration: none;
+    color: #ffa912;
+    cursor: pointer;
+    padding: 1vw 0 0 0;
+    cursor: pointer;
+    border: 1px solid #ffa912;
+    border-radius: 10vw;
+    margin: 1vw 0 0 0;
+}
+
+.botonesmenu:hover {
+    font-family: "Montserrat", sans-serif;
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    transition: all 1s ease;
+}
+
+.modal-body{
+    display: block !important;
+    justify-items: center;
+    object-fit: cover;
+}
+
+.menuhaburguesalista{
+    display: block;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.btn:active {
+    background-color: transparent !important;
+}
+
+.btn-primary {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: none;
+}
+
+.btn-primary:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+.modal-content{
+    background-color: #20123588;
+}
+
+.modal-header{
+    background-color: #20123588;
+}
+
+.btn-close{
+    background-color: #ffffffc0;
+}
+
+.btn-close:focus{
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/*-------- INICIO --------*/
+
+.headercontenedor{
+    background-color: #2d3799;
+    justify-self: center;
+}
+
+.contenedorinicio{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.section1{
+    width: 110%;
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    transform-style: preserve-3d;
+    background: url("images/fondoheaderinicio.png") top center;
+    background-size: cover;
+    align-items: center;
+    justify-content: top;
+    flex-direction: column;
+    text-align: center;
+}
+
+.sloganinicio{
+    color: white;
+    font-family: Montserrat;
+    font-size: 5.5vw;
+    margin-top: 10vw;
+    font-weight: bold;
+    animation: slideInUp 1s ease-in-out, pulse 1.5s ease-in-out infinite 1.2s, brillo 1.5s infinite alternate;
+}
+
+.textoinicio{
+    color: white;
+    font-size: x-large;
+    opacity: 0;
+    animation: aparecer 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+
+}@keyframes brillo {
+    0% { text-shadow: 0 0 5px #ffeed0, 0 0 10px #ffeed0; }
+    50% { text-shadow: 0 0 10px #ffeed0, 0 0 20px #ffeed0; }
+    100% { text-shadow: 0 0 5px #ffeed0, 0 0 10px #ffeed0; }
+}
+
+.caja1{
+    height: 30vh;
+    background-color: aqua;
+}
+
+.caja2{
+    height: 30vh;
+    background-color: rgb(159, 255, 96);
+}
+
+.contenedorcarrusel{
+    background-color: #201235;
+    margin: 2vw 0 8vw 0;
+}
+
+.contenedorcardsinicio{
+    background-color: #5a58a5;
+}
+
+.contenedorcards{
+/*     background-color: rgb(255, 96, 220); */
+    justify-items: center;
+    text-align: center;
+    margin: 5vw 0 5vw 0;
+}
+
+.card{
+    width: 25vw;
+    color: white;
+}
+
+.card-body{
+    background-color: #201235 !important;
+}
+
+.card-link{
+    color: #ffa912;
+    font-weight: bold;
+    animation: slideInUp 1s ease-in-out, pulse 1.5s ease-in-out infinite 1.2s !important;
+
+}
+
+.card-link:hover{
+    filter: brightness(150%);
+    transition: all 1s ease;
+}
+
+
+.contenedorvideobienvenida{
+    display: flex;
+    background-color: #715a94;
+    justify-content: center;
+    padding: 4vw 0 4vw 0;
+}
+
+.videobienvenida{
+    width: 60vw;
+}
+
+/* -------- FOOTER -------- */
+
+footer{
+background-color: #201235;
+}
+
+.contenedoranimacionfooter{
+/*     background-color: yellow; */
+}
+
+.contenedortextofooter{
+/*     background-color: violet; */
+    color: #FFF4E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorredesfooter{
+/*     background-color: tomato; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vw 0 2vw 0;
+}
+
+.redessocialesfooter{
+    background-color: aqua;
+    height: 4vw;
+    margin: 0 3vw 0 3vw;
+}
+
+.redessocialesfooter:hover{
+    filter: brightness(150%);
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+/*-------- NOSOTROS --------*/
+
+.contenedorvideoprincipalnosotros{
+/*     background-color: aqua; */
+    display: flex;
+    justify-content: center;
+}
+
+.videoprincipalnosotros{
+    width: 40vw;
+}
+
+.contenedortextoprincipalnosotros{
+    background-color: rgb(255, 255, 50);
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    color: white;
+    font-size: x-large;
+}
+
+.contenedortextoconocenos{
+    background-color: #201235;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    color: #ffa912;
+    font-size: x-large;
+    padding: 2vw 0 2vw 0;
+}
+
+.contenedorcardsperfiles{
+    background-color: #201235;
+}
+
+
+.contenedorperfiles{
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding-top: vw;
+}
+
+.card-body2{
+    background-color: #201235 !important;
+    padding-bottom: 2vw;
+}
+
+.list-group-item{
+    background-color: #201235 !important;
+    color: #FFF4E6;
+}
+
+.card-title{
+    padding: 1vw 0 0 0;
+    font-weight: bolder;
+    font-size: x-large;
+    color: #ffa912;
+}
+
+.card-role{
+    font-style: italic;
+    font-size: large;
+}
+
+.card-text{
+    padding-bottom: 1vw;
+}
+
+.perfiles{
+    margin: 0 0 2vw 0;
+}
+
+
+/*-------- PROYECTOS --------*/
+
+/*-------- SERVICIOS --------*/
+
+/*-------- MEDIAQUERIES --------*/
+
+/* Móviles pequeños */
+
+@media (max-width: 480px){
+    .nav-bar{
+        display: none;
+    }
+    
+    .nav-bar-hamburguer{
+        display: block !important;
+        padding-bottom: 2vw;
+    }
+
+    .logomenu2{
+        width: 7vw;
+    }
+
+    .modal-body{
+        display: block !important;
+        justify-items: center;
+        height: 45vw;
+    }
+
+    
+    .botonesmenu{
+        width: 70vw;
+    }
+
+    .perfiles{
+        margin: 0 0 2vw 0;
+        width: 80vw;
+    }
+
+    .tarjetainicio{
+        width: 80vw;
+    }
+
+    .sloganinicio{
+        font-size: 10vw;
+        margin-top: 30vw;
+    }
+    
+    .textoinicio{
+        font-size: larger;
+    }
+}
+
+
+/* Móviles grandes hamburguesaaaaa*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .nav-bar{
+        display: none;
+    }
+    
+    .nav-bar-hamburguer{
+        display: block !important;
+        padding: 2vw 0 3vw 0;
+    }
+
+    .modal-body{
+        display: block !important;
+        justify-items: center;
+        height: 35vw;
+    }
+
+    .botonesmenu{
+        width: 50vw;
+    }
+
+    .perfiles{
+        margin: 0 0 2vw 0;
+        width: 60vw;
+    }
+
+    .tarjetainicio{
+        width: 80vw;
+
+    }
+
+    .sloganinicio{
+        font-size: 7vw;
+        margin-top: 15vw;
+    }
+    
+    .textoinicio{
+        font-size: larger;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+
+    .nav-bar{
+        display: none;
+    }
+    
+    .nav-bar-hamburguer{
+        display: block !important;
+        padding-bottom: 3vw;
+    }
+
+    .modal-body{
+        display: block !important;
+        justify-items: center;
+        height: 27vw;
+    }
+
+    .tarjetainicio{
+        width: 70vw;
+    }
+
+    .sloganinicio{
+        font-size: 7vw;
+        margin-top: 15vw;
+    }
+    
+    .textoinicio{
+        font-size: larger;
+    }
+}
+
+
+/* Tabletas (orientación horizontal) */
+@media (min-width: 990px) and (max-width: 1280px) {
+    .nav-bar{
+        display: none;
+    }
+    
+    .nav-bar-hamburguer{
+        display: block !important;
+        padding-bottom: 3vw;
+    }
+
+    .modal-body{
+        display: block !important;
+        justify-items: center;
+        height: 27vw;
+    }
+
+    .logomenu2{
+        width: 5vw;
+    }
+
+    .imagenmenu{
+        width: 4vw;
+    }
+
+    .perfiles{
+        margin: 0 0 2vw 0;
+        width: 40vw;
+    }
+
+    .tarjetainicio{
+        width: 300px;
+    }
+}
+
+
+/* Escritorios pequeños */
+@media (min-width: 1281px) and (max-width: 1440px) {
+    .nav-bar{
+        display: flex;
+    }
+
+    .nav-bar-hamburguer{
+        display: none !important;
+    }
+
+    .tarjetainicio{
+        width: 400px;
+    }
+}
+
+/* Escritorios grandes */
+@media (min-width: 1441px) {
+    .nav-bar{
+        display: flex;
+    }
+
+    .nav-bar-hamburguer{
+        display: none !important;
+    }
+}
+
+
+
+
+
