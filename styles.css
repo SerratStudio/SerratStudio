@@ -26,9 +26,17 @@ html{
 }
 
 body{
-    background-color: #201235;
+    background-color: #d0ff00;
     display: flex;
     flex-direction: column;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
 }
 
 header{
@@ -63,21 +71,24 @@ header{
     display: flex;
     float: right;
     justify-content: center;
+    align-items: center;
 }
 
 .menu ul li {
+    height: 4vw;
     width: 15vw;
     display: inline-block;
     position: relative;
     overflow: hidden;
-    font-size: larger;
+    font-size: x-large;
     text-align: center;
     text-decoration: none;
     color: white;
     margin: 0 3vw 0 0;
     cursor: pointer;
-    border: 1px solid #ffa912;
+    border: 2px solid #ffa912;
     border-radius: 10vw;
+    align-content: center;
 }
 
 .menu ul li:hover:before {
@@ -124,6 +135,7 @@ header{
     margin: 0 !important;
     padding: 0 !important;
     overflow: hidden !important;
+
 }
 
 .section1{
@@ -136,14 +148,16 @@ header{
     justify-content: top;
     flex-direction: column;
     text-align: center;
-
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    
 }
 
 .sloganinicio{
     color: white;
     font-family: Montserrat;
     font-size: 5.5vw;
-    margin-top: 10vw;
+    margin-top: 12vw;
     font-weight: bold;
     animation: slideInUp 1s ease-in-out, pulse 1.5s ease-in-out infinite 1.2s, brillo 1.5s infinite alternate;
 }
@@ -170,19 +184,12 @@ header{
     100% { text-shadow: 0 0 5px #ffeed0, 0 0 10px #ffeed0; }
 }
 
-.caja1{
-    height: 30vh;
-    background-color: aqua;
-}
-
-.caja2{
-    height: 30vh;
-    background-color: rgb(159, 255, 96);
-}
-
 .contenedorcarrusel{
     background-color: #201235;
-    margin: 2vw 0 8vw 0;
+    padding: 5vw 0 5vw 0;
+    margin-top: 0 !important;
+    display: block;
+    outline: 1px solid #201235;
 }
 
 .contenedorcardsinicio{
@@ -380,14 +387,19 @@ padding-top: 2vw;
     }
 
     .menu ul li {
-        margin: 2vw 7vw 2vw 0;
-        padding: 1vw 2vw 0 0;
-        width: 60vw;
+        margin: 2vw;
+        width: 50vw;
+        height: 8vw;
         justify-self: center;
+        font-size: large;
+        cursor: pointer;
+        border: 1px solid #ffa912;
+        align-content: center;
     }
 
     .menu-icon {
         display: block;
+        height: 7vw;
     }
 
     .menu-icon:hover {
@@ -395,7 +407,7 @@ padding-top: 2vw;
     }
 
     .logomenu{
-        height: 10vw;
+        height: 7vw;
     }
 
     .perfiles{
@@ -438,10 +450,11 @@ padding-top: 2vw;
     }
 
     .menu ul li {
-        margin: 2vw 7vw 2vw 0;
-        padding: 1vw 0;
+        margin: 2vw;
         width: 50vw;
         justify-self: center;
+        font-size: medium;
+        padding-bottom: 4vw !important;
     }
 
     .menu-icon {
@@ -494,6 +507,10 @@ padding-top: 2vw;
     .textoinicio{
         font-size: larger;
     }
+
+    .menu ul li {
+        font-size: medium;
+    }
 }
 
 
@@ -507,6 +524,10 @@ padding-top: 2vw;
 
     .tarjetainicio{
         width: 300px;
+    }
+
+    .menu ul li {
+        font-size: medium;
     }
 }
 
