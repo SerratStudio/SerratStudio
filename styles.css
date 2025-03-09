@@ -26,9 +26,11 @@ html{
 }
 
 body{
-    background-color: #d0ff00;
+    background-color: #201235;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 100%;
     margin: 0 !important;
     padding: 0 !important;
     border: none;
@@ -75,7 +77,7 @@ header{
 }
 
 .menu ul li {
-    height: 4vw;
+    height: 3vw;
     width: 15vw;
     display: inline-block;
     position: relative;
@@ -192,6 +194,10 @@ header{
     outline: 1px solid #201235;
 }
 
+.carousel-caption{
+    font-size: larger;
+}
+
 .contenedorcardsinicio{
     background-color: #5a58a5;
     overflow-x: hidden;
@@ -216,11 +222,10 @@ header{
 .card-link{
     color: #ffa912;
     font-weight: bold;
-    animation: slideInUp 1s ease-in-out, pulse 1.5s ease-in-out infinite 1.2s !important;
-
 }
 
 .card-link:hover{
+    cursor: pointer;
     filter: brightness(150%);
     transition: all 1s ease;
 }
@@ -237,71 +242,48 @@ header{
     width: 60vw;
 }
 
-/* -------- FOOTER -------- */
-
-footer{
-background-color: #201235;
-}
-
-/* .contenedoranimacionfooter{
-/*     background-color: yellow; */
-/* } */
-
-.contenedortextofooter{
-/*     background-color: violet; */
-padding-top: 2vw;
-    color: #FFF4E6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contenedorredesfooter{
-/*     background-color: tomato; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2vw 0 2vw 0;
-}
-
-.redessocialesfooter{
-    background-color: aqua;
-    height: 4vw;
-    margin: 0 3vw 0 3vw;
-}
-
-.redessocialesfooter:hover{
-    filter: brightness(150%);
-    transition: all 1s ease;
-    cursor: pointer;
-}
 
 
 /*-------- NOSOTROS --------*/
 
+.headercontenedor2{
+    padding-top: 3vw;
+}
+
+.contenedornosotros{
+    background: linear-gradient(#201235 50%, #2d3799);
+    display: flex;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    padding: 5vw 0 5vw 0;
+}
+
 .contenedorvideoprincipalnosotros{
-/*     background-color: aqua; */
     display: flex;
     justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
 }
 
 .videoprincipalnosotros{
-    width: 40vw;
+    width: 50vw;
 }
 
 .contenedortextoprincipalnosotros{
-    background-color: rgb(255, 255, 50);
     display: flex;
     justify-content: center;
     justify-items: center;
     align-items: center;
     align-content: center;
     color: white;
-    font-size: x-large;
+    font-size: larger;
+    text-align: justify;
+    padding-right: 3vw;
 }
 
-.contenedortextoconocenos{
-    background-color: #201235;
+.textoconocenos{
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -313,7 +295,18 @@ padding-top: 2vw;
 }
 
 .contenedorcardsperfiles{
-    background-color: #201235;
+    background-color: #2d3799;
+    position: relative;
+    z-index: 1;
+}
+
+.contenedorcardsperfiles::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('images/texturacopeton.png');
+    opacity: 0.4; /* Controla la opacidad */
+    z-index: -1;
 }
 
 
@@ -322,7 +315,9 @@ padding-top: 2vw;
     justify-content: center;
     color: white;
     text-align: center;
-    padding-top: vw;
+    padding: 0 0 5vw 0;
+    z-index: 1000;
+
 }
 
 .card-body2{
@@ -349,18 +344,111 @@ padding-top: 2vw;
 
 .card-text{
     padding-bottom: 1vw;
+    padding: 0 2vw 1vw 2vw;
 }
 
 .perfiles{
     margin: 0 0 2vw 0;
 }
 
+.contenedor {
+    padding: 5vw 0 5vw 0;
+    background-color: #201235;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+}
 
-/*-------- PROYECTOS -------*/
+.contenido{
+    padding: 0 0 1vw 0;
+    color: #ffa912;
+    font-size: x-large;
+    padding: 2vw 0 2vw 0;
+    font-weight: bold;
+}
+  
+.imagen-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+  
+.imagen {
+    display: block;
+    width: 40vw;
+    height: auto;
+}
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
-/*-------- SERVICIOS -------*/
+.textomisionvision{
+    color: white;
+    font-size: large;
+    text-align: center;
+    padding: 0 2vw 0 2vw;
+}
+  
+.imagen-wrapper:hover .overlay {
+opacity: 1;
+}
 
-/*-------- MEDIAQUERIES -------*/
+/*-------- PROYECTOS --------*/
+
+/*-------- SERVICIOS --------*/
+
+/* -------- FOOTER -------- */
+
+footer{
+    background-color: #201235;
+    }
+    
+    /* .contenedoranimacionfooter{
+    /*     background-color: yellow; */
+    /* } */
+    
+    .contenedortextofooter{
+    /*     background-color: violet; */
+    padding-top: 2vw;
+        color: #FFF4E6;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contenedorredesfooter{
+    /*     background-color: tomato; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2vw 0 2vw 0;
+    }
+    
+    .redessocialesfooter{
+        background-color: aqua;
+        height: 4vw;
+        margin: 0 3vw 0 3vw;
+    }
+    
+    .redessocialesfooter:hover{
+        filter: brightness(150%);
+        transition: all 1s ease;
+        cursor: pointer;
+    }
+    
+
+/*-------- MEDIAQUERIES --------*/
 
 /* Móviles pequeños */
 
@@ -388,18 +476,23 @@ padding-top: 2vw;
 
     .menu ul li {
         margin: 2vw;
-        width: 50vw;
-        height: 8vw;
+        width: 60vw;
+        height: 10vw;
         justify-self: center;
         font-size: large;
         cursor: pointer;
         border: 1px solid #ffa912;
         align-content: center;
+        margin-right: 10vw;
+    }
+
+    .headercontenedor{
+        padding-top: 10vw;
     }
 
     .menu-icon {
         display: block;
-        height: 7vw;
+        height: 10vw;
     }
 
     .menu-icon:hover {
@@ -407,7 +500,7 @@ padding-top: 2vw;
     }
 
     .logomenu{
-        height: 7vw;
+        height: 10vw;
     }
 
     .perfiles{
@@ -419,13 +512,44 @@ padding-top: 2vw;
         width: 80vw;
     }
 
+    .card-text{
+        font-size: medium;
+    }
+
+    .card-title{
+        font-size: large;
+        padding-bottom: 5vw;
+    }
+
+    .section1{
+        width: 100%;
+        min-height: 85vh;
+        
+    }
+
     .sloganinicio{
-        font-size: 10vw;
-        margin-top: 40vw;
+        font-size: 11vw;
+        margin-top: 45vw;
     }
     
     .textoinicio{
-        font-size: larger;
+        font-size: large;
+    }
+
+    .contenedorcarrusel{
+        padding-top: 0;
+        padding-bottom: 10vw;
+    }
+
+    .contenedortextofooter{
+        font-size: small;
+        text-align: center;
+    }
+
+    .redessocialesfooter{
+        height: 10vw;
+        margin-left: 8vw;
+        margin-bottom: 5vw;
     }
 }
 
@@ -501,7 +625,7 @@ padding-top: 2vw;
 
     .sloganinicio{
         font-size: 7vw;
-        margin-top: 15vw;
+        margin-top: 20vw;
     }
     
     .textoinicio{
@@ -528,6 +652,10 @@ padding-top: 2vw;
 
     .menu ul li {
         font-size: medium;
+    }
+
+    .logomenu{
+        height: 4vw;
     }
 }
 

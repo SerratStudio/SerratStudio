@@ -12,6 +12,34 @@
   </head>
   
   <body>
+    <header class="container-fluid headercontenedor2">
+          <div class="row nav-bar">
+              <div class="col-2 col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 contenedorlogomenu">
+                  <a href="#footer">
+                      <img src="images/logomenu.png" alt="" class="logomenu">
+                  </a>
+              </div>
+              <div class="col-10 col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                <nav class="menu">
+                  <div class="menu-icon" onclick="toggleMenu()">
+                      <img src="images/menu.png" alt="Menú">
+                  </div>
+                  <ul id="menu-list">
+                      <li><a href="index.html">Inicio</a></li>
+                      <li><a href="nosotros.html">Nosotros</a></li>
+                      <li><a href="proyectos.html">Proyectos</a></li>
+                      <li><a href="servicios.html">Servicios</a></li>
+                  </ul>
+                </nav>
+            
+                <script>
+                    function toggleMenu() {
+                        document.getElementById("menu-list").classList.toggle("show");
+                    }
+                </script>
+              </div>
+          </div>
+    </header>
     
 
 
@@ -20,14 +48,18 @@
 <!------------ VIDEO PRINCIPAL ---------->
 
     <div class="row">
-      <div class="col-12 col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-12 contenedorvideoprincipalnosotros">
-        <img src="images/pruebahorizontal3.png" alt="" class="videoprincipalnosotros">
-      </div>
-      <div class="col-12 col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-sm-12 contenedortextoprincipalnosotros">
-        <p>Serrat Studio es una productora multimedia dedicada a la creación de contenidos con impacto en Bogotá y sus alrededores.
-        <br>
-        <br>
-        A través de narrativas claras y efectivas, buscamos visibilizar problemáticas, generar conciencia y fomentar la empatía y el cambio positivo en las comunidades.</p>
+      <div class="col-12 col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 contenedornosotros">
+        <div class="row">
+          <div class="col-12 col-xxl-7 col-xl-7 col-lg-7 col-md-12 col-sm-12 contenedorvideoprincipalnosotros">
+            <img src="images/pruebahorizontal3.png" alt="" class="videoprincipalnosotros">
+          </div>
+          <div class="col-12 col-xxl-5 col-xl-5 col-lg-5 col-md-12 col-sm-12 contenedortextoprincipalnosotros">
+            <p>Somos una productora multimedia dedicada a la creación de contenidos con impacto en Bogotá y sus alrededores.
+            <br>
+            <br>
+            A través de narrativas claras y efectivas, buscamos visibilizar problemáticas, generar conciencia y fomentar la empatía y el cambio positivo en las comunidades.</p>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -36,17 +68,13 @@
 
   <div class="container-fluid contenedorcardsperfiles">
     <div class="row">
-      <div class="col-12 contenedortextoconocenos">
-        <p class="textoconocenos"><strong>¡Conócenos!</strong></p>
-      </div>
-    </div>
-    <div class="row">
+      <p class="textoconocenos"><strong>¡Conoce nuestro equipo!</strong></p>
       <div class="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 contenedorperfiles">
         <div class="card perfiles">
           <img src="images/pruebacuadrado.png" class="card-img-top" alt="...">
           <div class="card-body2">
             <h5 class="card-title animate__animated animate__pulse animate__infinite	infinite">María José Rodriguez</h5>
-            <p class="card-role">Directora/Audiovisual</p>
+            <p class="card-role">Audiovisual</p>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
           <ul class="list-group list-group-flush">
@@ -94,7 +122,6 @@
             <li class="list-group-item">Animadora</li>
           </ul>
           <div class="card-body">
-            <a href="#" class="card-link">Instagram</a>
             <a href="#" class="card-link">Portafolio</a>
           </div>
         </div>
@@ -165,15 +192,68 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12"></div>
-      <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12"></div>
+      <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="contenedor">
+          <p class="contenido">Nuestra misión</p>
+          <div class="imagen-wrapper">
+            <img src="images/pruebahorizontal.png" alt="Imagen de ejemplo" class="imagen">
+            <div class="overlay">
+              <p class="textomisionvision"><strong>Serrat Studio</strong> crea contenidos transmedia y multimedia enfocados en abordar problemáticas sociales de Bogotá y sus alrededores, con el fin de visibilizar estas realidades y generar conciencia en la comunidad a través del poder de la narrativa visual y digital.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="contenedor">
+          <p class="contenido">Nuestra visión</p>
+          <div class="imagen-wrapper">
+            <img src="images/pruebahorizontal.png" alt="Imagen de ejemplo" class="imagen">
+            <div class="overlay">
+              <p class="textomisionvision"><strong>Serrat Studio</strong> se visualiza como una productora líder en el mercado multimedia a nivel nacional, reconocida por su eficacia en la comunicación de las realidades y desafíos de las comunidades en diversas regiones del país, así contribuyendo al cambio y desarrollo social a través de historias verdaderas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
 
 
-<!-- BOOTSTRAP -->
+    <!-- FOOTEEEEEEEEEEEER -->
+
+    <footer>
+      <div class="row">
+        <div class="col-12 col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 contenedoranimacionfooter">
+          <!-- <img src="images/" alt=""> -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <div class="row">
+            <div class="col-12 col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 contenedortextofooter">
+              <p id="footer">Serrat Studio | Productora Multimedia | 2025</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 contenedorredesfooter">
+              <a href="https://www.instagram.com/serratstudio.bog/">
+                <img src="images/iconoinsta.png" alt="" class="redessocialesfooter">
+              </a>
+              <a href="mailto:serratstudio.bog@gmail.com">
+                <img src="images/iconocorreo.png" alt="" class="redessocialesfooter">
+              </a>
+              <a href="https://github.com/SerratStudio">
+                <img src="images/iconogithub.png" alt="" class="redessocialesfooter">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+        <!-- BOOTSTRAP -->
         <script src="bootstrap/js/bootstrap.min.js"></script>
-<!-- BOOTSTRAP -->
+        <!-- BOOTSTRAP -->
   </body>
 </html>
