@@ -69,20 +69,24 @@ header{
 }
 
 .menu ul {
-    list-style: none;
-    display: flex;
-    float: right;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Mantener menú visible */
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* Ocultar icono de menú hamburguesa en pantallas grandes */
+.menu-icon {
+    display: none !important;
 }
 
 .menu ul li {
-    height: 2vw;
+    height: 60px;
     width: 15vw;
     display: inline-block;
     position: relative;
     overflow: hidden;
-    font-size: x-large;
+    font-size: xx-large;
     text-align: center;
     text-decoration: none;
     color: white;
@@ -131,6 +135,7 @@ header{
 
 .headercontenedor{
     background-color: #2d3799;
+    padding-top: 3vw !important;
 }
 
 .contenedorinicio{
@@ -158,15 +163,16 @@ header{
 .sloganinicio{
     color: white;
     font-family: Montserrat;
-    font-size: 5.5vw;
-    margin-top: 12vw;
+    font-size: 7vw;
+    margin-top: 15vw;
     font-weight: bold;
     animation: slideInUp 1s ease-in-out, pulse 1.5s ease-in-out infinite 1.2s, brillo 1.5s infinite alternate;
 }
 
 .textoinicio{
     color: white;
-    font-size: x-large;
+    padding: 0 9vw 0 9vw;
+    font-size: 2.2vw;
     opacity: 0;
     animation: aparecer 1s ease-in-out forwards;
     animation-delay: 1s;
@@ -195,7 +201,7 @@ header{
 }
 
 .carousel-caption{
-    font-size: larger;
+    font-size: 1.5vw;
 }
 
 .contenedorcardsinicio{
@@ -204,10 +210,10 @@ header{
 }
 
 .contenedorcards{
-/*     background-color: rgb(255, 96, 220); */
     justify-items: center;
     text-align: center;
     margin: 5vw 0 5vw 0;
+    font-size: xx-large;
 }
 
 .card{
@@ -221,6 +227,14 @@ header{
     align-content: center;
 }
 
+.card-title{
+    padding: 1vw 0 1vw 0;
+    font-weight: bolder;
+    font-size: xx-large;
+    color: #ff4824;
+    font-weight: bolder;
+}
+
 .card-link{
     color: #ffa912;
     font-weight: bold;
@@ -231,19 +245,6 @@ header{
     filter: brightness(150%);
     transition: all 1s ease;
 }
-
-
-.contenedorvideobienvenida{
-    display: flex;
-    background-color: #715a94;
-    justify-content: center;
-    padding: 4vw 0 4vw 0;
-}
-
-.videobienvenida{
-    width: 60vw;
-}
-
 
 
 /*-------- NOSOTROS --------*/
@@ -279,8 +280,9 @@ header{
     justify-items: center;
     align-items: center;
     align-content: center;
+    padding-right: 5vw;
     color: white;
-    font-size: larger;
+    font-size: xx-large;
     text-align: justify;
 }
 
@@ -291,7 +293,7 @@ header{
     align-items: center;
     align-content: center;
     color: #ffa912;
-    font-size: x-large;
+    font-size: xx-large;
     padding: 0 0 3vw 0;
     z-index: 2000;
 }
@@ -302,19 +304,20 @@ header{
 }
 
 .imagen-overlay {
-    position: absolute; /* Posiciona la imagen encima del contenedor */
-    top: 0; /* Ajusta la imagen para que quede alineada en la parte superior del contenedor */
-    left: 0; /* Ajusta la imagen para que quede alineada a la izquierda */
-    width: 100%; /* Puedes ajustar el tamaño de la imagen */
-    height: 100%; /* Ajusta la altura si deseas que ocupe todo el contenedor */
-    object-fit: cover; /* Hace que la imagen se ajuste al contenedor sin distorsionarse */ /* Controla la opacidad de la imagen */
-    pointer-events: none; /* Evita que la imagen interfiera con la interacción del usuario en otros elementos */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
 }
 
 .contenedorperfiles{
     display: flex;
     justify-content: center;
     color: white;
+    font-size: xx-large;
     text-align: center;
     padding: 0 0 5vw 0;
 
@@ -330,16 +333,9 @@ header{
     color: #FFF4E6;
 }
 
-.card-title{
-    padding: 1vw 0 0 0;
-    font-weight: bolder;
-    font-size: x-large;
-    color: #ffa912;
-}
-
 .card-role{
     font-style: italic;
-    font-size: large;
+    font-size: xx-large;
 }
 
 .card-text{
@@ -361,8 +357,8 @@ header{
 
 .contenido{
     padding: 0 0 1vw 0;
-    color: #ffa912;
-    font-size: x-large;
+    color: #ff4824;
+    font-size: xx-large;
     padding: 2vw 0 2vw 0;
     font-weight: bold;
 }
@@ -395,7 +391,7 @@ header{
 
 .textomisionvision{
     color: white;
-    font-size: large;
+    font-size: xx-large;
     text-align: center;
     padding: 0 2vw 0 2vw;
 }
@@ -423,17 +419,57 @@ header{
     background-color: #005959;
 }
 
-.contenedorinicioproyectos{
-    background-color: #005959;
+.contenedoranimacion{
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100vw;
+    overflow-x: hidden;
     align-items: center;
     align-content: center;
     justify-items: center;
-    justify-content: center;
     text-align: center;
+}
+
+.contenedorinicioproyectos{
+    display: flex;
+    background-color: #ffa912;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100vw;
+    overflow-x: hidden;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.animacionreiniciarte{
+    width: 100vw;
+}
+
+.contenedorinicioproyectoocultar{
+    display: none;
+    overflow-x: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100vw;
+    overflow-x: hidden;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.animacionreiniciartecelular{
+    width: 100vw;
 }
 
 .reiniciarteinicio{
     width: 100vw;
+}
+
+.contenedorintroduccionproyecto{
+    background-color: #ff4824;
 }
 
 /*-------- SERVICIOS -------*/
@@ -458,7 +494,7 @@ header{
 }
 
 .tituloservicios{
-    margin-top: 12vw;
+    margin-top: 15vw;
     color: white;
     font-family: Montserrat;
     font-size: 4vw;
@@ -466,10 +502,20 @@ header{
     animation: slideInUp 1s ease-in-out, pulse 1.5s ease-in-out infinite 1.2s, brillo 1.5s infinite alternate;
 }
 
+.tituloservicioindividual{
+    color: #ff4824;
+    font-size: 2vw;
+    font-weight: bolder;
+    border: 2px solid #ffa912;
+    border-radius: 10vw;
+    padding: 20px 50px;
+}
+
+
 .textoservicios{
     color: white;
-    font-size: x-large;
-    margin-bottom: 3vw;
+    font-size: 2vw;
+    padding: 0 5vw 2vw 5vw;
 }
 
 .contenedorservicios{
@@ -488,12 +534,17 @@ header{
     justify-items: center !important;
 }
 
+.contenedorimagenserviciosocultar{
+    display: none;
+}
+
 .imagenservicios{
     width: 30vw;
 }
 
 .contenedordescripcionservicios{
     color: white;
+    font-size: xx-large;
     display: inline-block;
     align-items: center;
     align-content: center;
@@ -505,6 +556,7 @@ header{
 .descripcionservicios{
     font-size: larger;
     text-align: center;
+
 }
 
 .servicios1{
@@ -522,21 +574,510 @@ header{
 
 footer{
     background-color: #201235;
+    overflow-x: hidden;
     }
     
     /* .contenedoranimacionfooter{
     /*     background-color: yellow; */
     /* } */
     
+.copetonfooter{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.contenedortextofooter{
+/*     background-color: violet; */
+    padding-top: 2vw;
+    color: #FFF4E6;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+.contenedorredesfooter{
+/*     background-color: tomato; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vw 0 2vw 0;
+}
+    
+.redessocialesfooter{
+    height: 3vw;
+     margin: 0 3vw 0 3vw;
+}
+    
+.redessocialesfooter:hover{
+    filter: brightness(150%);
+    transition: all 1s ease;
+    cursor: pointer;
+}
+    
+
+/*-------- MEDIAQUERIES --------*/
+
+/*-------- SM --------*/
+
+@media (max-width: 576px) {
+
+    html{
+        padding: 0;
+        margin: 0%;
+    }
+
+    .headercontenedor{
+        padding-top: 10vw !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .headercontenedor2{
+        padding-top: 10vw !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100% !important;
+        text-align: center;
+        z-index: 1500;
+        background-color: #201235d6;
+        align-content: center !important;
+        align-items: center !important;
+    }
+
+    .menu ul.show {
+        display: flex !important;
+        height: 65vw!important;
+        align-content: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+        justify-items: center !important;
+        padding-top: 5vw;
+    }
+
+    .menu ul li {
+        font-size: larger !important;
+        height: 50px !important;
+        width: 60vw !important;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        font-size: small;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+        border: 2px solid #ffa912;
+        border-radius: 10vw;
+        align-content: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+        justify-items: center !important;
+        margin-bottom: 5vw !important;
+        margin-right: 8vw !important;
+    }
+
+    .li{
+        height: 60px;
+        width: 60vw;
+    }
+
+    .menu-icon {
+        display: block !important; /* Mostrar icono de menú en móviles 
+        */
+    }
+
+    .menu-icon:hover {
+        filter: brightness(120%);
+    }
+
+    .logomenu{
+        height: 40px;
+        padding: 0 2vw;
+    }
+
+    .sloganinicio{
+        padding-top: 15vw !important;
+        font-size: 14vw !important;
+    }
+
+    .textoinicio{
+        font-size: larger;
+        padding: 2vw 0 0 0;
+    }
+
+    
+    /*-------- INICIO --------*/
+    
+    .section1{
+        width: 100%;
+        min-height: 80vh !important;
+        display: flex;
+        background: url("images/fondoheaderinicio.png") top center;
+        background-size: cover;
+        align-items: center;
+        justify-content: top;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .carousel-caption{
+        font-size: 2vw;
+    }
+
+    .contenedorcarrusel{
+      padding-top: 0;
+    }
+    
+    .contenedorcardsinicio{
+        background-color: #5a58a5;
+        overflow-x: hidden;
+    }
+    
+    .contenedorcards{
+        width: 100vw !important;
+        justify-items: center;
+        text-align: center;
+        margin: 5vw 0 5vw 0;
+    }
+    
+    body .card{
+        width: 80vw !important;
+        color: white;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .card-body{
+        padding: 0 1vw 3vw 1vw;
+    }
+
+    .card-text{
+        padding: 10px !important;
+        font-size: large !important;
+    }
+
+    .card-title{
+        font-size: x-large !important;
+        padding: 5vw 3vw 0 3vw;
+    }
+
+    .card-link{
+        font-size: large !important;
+    }
+
+    
+    
+    /*-------- NOSOTROS --------*/
+    
+    .headercontenedor2{
+        padding-top: 3vw;
+    }
+    
+    .contenedornosotros{
+        background: linear-gradient(#201235 50%, #2d3799);
+        display: flex;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+        padding: 5vw 0 5vw 0;
+    }
+    
+    .contenedorvideoprincipalnosotros{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+    }
+    
+    .videoprincipalnosotros{
+        width: 90vw !important;
+        padding-top: 5vw;
+    }
+    
+    body .contenedortextoprincipalnosotros{
+        padding: 10vw 10vw 10vw 10vw !important;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        color: white;
+        font-size: medium;
+        text-align: justify;
+    }
+    
+    .textoconocenos{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        color: #ffa912;
+        font-size: larger !important;
+        padding: 0 0 3vw 0;
+        z-index: 2000;
+    }
+    
+    .contenedorcardsperfiles{
+        background-color: #2d3799;
+        position: absolute;
+    }
+    
+    .imagen-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+        pointer-events: none;
+    }
+    
+    .contenedorperfiles{
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: large;
+        text-align: center;
+        padding: 0 0 15vw 0 !important;
+        margin: 0 !important;
+    
+    }
+    
+    .card-body2{
+        background-color: #201235 !important;
+        padding-bottom: 2vw;
+    }
+    
+    .list-group-item{
+        background-color: #201235;
+        color: #FFF4E6;
+    }
+    
+    .card-role{
+        font-style: italic;
+        font-size: large;
+        padding: 0 10px 0 10px !important;
+    }
+    
+    .card-text{
+        padding-bottom: 1vw;
+        padding: 0 2vw 1vw 2vw;
+    }
+    
+    .perfiles{
+        width: 90vw !important;
+        margin: 0 0 2vw 0;
+    }
+    
+    .contenedor {
+        padding: 10vw 0 5vw 0 !important;
+        background-color: #201235;
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .contenido{
+        padding: 0 0 1vw 0;
+        color: #ff4824;
+        font-size: larger;
+        padding: 2vw 0 2vw 0;
+        font-weight: bold;
+    }
+      
+    .imagen-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+      
+    .imagen {
+        display: block;
+        width: 90vw !important;
+        height: auto;
+    }
+      
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .textomisionvision{
+        color: white;
+        font-size: 4vw !important;
+        text-align: center;
+        padding: 0 2vw 0 2vw;
+    }
+      
+    .imagen-wrapper:hover .overlay {
+        opacity: 1;
+    }
+    
+    .contenedorfotonosotros{
+        background-color: #2d3799;
+        padding: 5vw 0 5vw 0;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .fotonosotros{
+        width: 90vw !important;
+    }
+    
+    /*-------- PROYECTOS -------*/
+
+    
+    /*-------- SERVICIOS -------*/
+    
+    .contenedorinicioservicios{
+        width: 100%;
+        min-height: 85vh !important;
+        display: flex;
+        background: url("images/fondoheaderservicios.png") top center;
+        background-size: cover;
+        align-items: center;
+        justify-content: top;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: top;
+        text-align: center;
+    }
+    
+    body .tituloservicios{
+        margin-top: 25vw !important;
+        color: white;
+        font-family: Montserrat;
+        font-size: 10vw !important;
+        font-weight: bold;
+        animation: slideInUp 1s ease-in-out, pulse 1.5s ease-in-out infinite 1.2s, brillo 1.5s infinite alternate;
+    }
+
+    body .textoservicios{
+        color: white;
+        font-size: large;
+        padding: 0 5vw 2vw 5vw;
+    }
+    
+    .tituloservicioindividual{
+        color: #ff4824;
+        font-size: large;
+        font-weight: bolder;
+        border: 2px solid #ffa912;
+        border-radius: 10vw;
+        padding: 10px 40px !important;
+        text-align: center;
+    }
+
+    .contenedorservicios{
+        display: block;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+    }
+    
+    .contenedorimagenservicios{
+        display: none;
+    }
+    
+    .contenedorimagenserviciosocultar{
+        display: flex;
+        align-items: center !important;
+        align-content: center !important;
+        justify-content: center !important;
+        justify-items: center !important;
+    }
+    
+    body .imagenservicios{
+        width: 80vw !important;
+        padding-top: 3vw !important;
+    }
+    
+    body .contenedordescripcionservicios{
+        color: white;
+        font-size: small;
+        display: inline-block;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        padding: 0 2vw 0 2vw;
+    }
+    
+    .descripcionservicios{
+        font-size: larger;
+        text-align: center;
+    
+    }
+    
+    .servicios1{
+        background-color: #2d3799;
+        padding: 5vw 0 5vw 0;
+        padding: 5vw 0 5vw 0;
+        margin: 10vw 0 10vw 0 !important;
+    }
+    
+    body .servicios2{
+        background-color: #201235;
+        padding: 5vw 0 5vw 0;
+        margin: 10vw 0 10vw 0 !important;
+    }
+
+    /* -------- FOOTER -------- */
+    
+    footer{
+        background-color: #201235;
+        overflow-x: hidden;
+        }
+        
+        /* .contenedoranimacionfooter{
+        /*     background-color: yellow; */
+        /* } */
+        
+    .copetonfooter{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    
     .contenedortextofooter{
     /*     background-color: violet; */
-    padding-top: 2vw;
+        padding-top: 2vw;
         color: #FFF4E6;
+        font-size: small !important;
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
-    
+        
     .contenedorredesfooter{
     /*     background-color: tomato; */
         display: flex;
@@ -544,314 +1085,1966 @@ footer{
         align-items: center;
         padding: 2vw 0 2vw 0;
     }
+        
+    body .redessocialesfooter{
+        height: 7vw !important;
+        margin: 0 5vw 0 5vw;
+    }
+        
+    .redessocialesfooter:hover{
+        filter: brightness(150%);
+        transition: all 1s ease;
+        cursor: pointer;
+    }
+
+}
+
+/*-------- MD --------*/
+
+@media (max-width: 768px) {
+
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        z-index: 1500;
+        background-color: #201235d6;
+        align-content: center !important;
+        align-items: center !important;
+    }
+
+    .menu ul.show {
+        display: flex !important;
+        height: 40vw;
+    }
+
+    .menu ul li {
+        height: 60px;
+        width: 60vw !important;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        font-size: small;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+        border: 2px solid #ffa912;
+        border-radius: 10vw;
+        align-content: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+        justify-items: center !important;
+    }
+
+    .li{
+        height: 60px;
+        width: 60vw;
+    }
+
+    .menu-icon {
+        display: block !important; /* Mostrar icono de menú en móviles 
+        */
+    }
+
+    .menu-icon:hover {
+        filter: brightness(120%);
+    }
+
+    .logomenu{
+        height: 40px;
+        padding: 0 2vw;
+    }
+
+    .sloganinicio{
+        padding-top: 7vw;
+        font-size: 10vw;
+    }
+
+    .textoinicio{
+        font-size: larger;
+    }
+
     
-    .redessocialesfooter{
-        background-color: aqua;
-        height: 4vw;
-        margin: 0 3vw 0 3vw;
+    /*-------- INICIO --------*/
+    
+    .carousel-caption{
+        font-size: 2vw;
+    }
+
+    .contenedorcarrusel{
+      padding-top: 0;
     }
     
+    .contenedorcardsinicio{
+        background-color: #5a58a5;
+        overflow-x: hidden;
+    }
+    
+    .contenedorcards{
+        justify-items: center;
+        text-align: center;
+        margin: 5vw 0 5vw 0;
+        font-size: 2vw !important;
+    }
+    
+    .card{
+        width: 60vw !important;
+        color: white;
+    }
+
+    .card-text{
+        padding: 15px !important;
+        font-size: larger;
+    }
+
+    .card-title{
+        font-size: x-large;
+    }
+
+    
+    
+    /*-------- NOSOTROS --------*/
+    
+    .headercontenedor2{
+        padding-top: 3vw;
+    }
+    
+    .contenedornosotros{
+        background: linear-gradient(#201235 50%, #2d3799);
+        display: flex;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+        padding: 5vw 0 5vw 0;
+    }
+    
+    .contenedorvideoprincipalnosotros{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+    }
+    
+    .videoprincipalnosotros{
+        width: 80vw !important;
+    }
+    
+    .contenedortextoprincipalnosotros{
+        padding: 5vw 10vw 0 10vw !important;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        color: white;
+        font-size: large;
+        text-align: justify;
+    }
+    
+    .textoconocenos{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        color: #ffa912;
+        font-size: larger !important;
+        padding: 0 0 3vw 0;
+        z-index: 2000;
+    }
+    
+    .textoconocenos{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        color: #ffa912;
+        font-size: xx-large;
+        padding: 0 0 3vw 0;
+        z-index: 2000;
+    }
+    
+    .contenedorcardsperfiles{
+        background-color: #2d3799;
+        position: relative;
+    }
+    
+    .imagen-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+        pointer-events: none;
+    }
+    
+    .contenedorperfiles{
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: large;
+        text-align: center;
+        padding: 0 0 5vw 0;
+    
+    }
+    
+    .card-body2{
+        background-color: #201235 !important;
+        padding-bottom: 2vw;
+    }
+    
+    .list-group-item{
+        background-color: #201235 !important;
+        color: #FFF4E6;
+    }
+    
+    .card-role{
+        font-style: italic;
+        font-size: large;
+    }
+    
+    .card-text{
+        padding-bottom: 1vw;
+        padding: 0 2vw 1vw 2vw;
+    }
+    
+    .perfiles{
+        width: 50vw;
+        margin: 0 0 2vw 0;
+    }
+    
+    .contenedor {
+        padding: 0 0 5vw 0;
+        background-color: #201235;
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .contenido{
+        padding: 0 0 1vw 0;
+        color: #ff4824;
+        font-size: larger;
+        padding: 2vw 0 2vw 0;
+        font-weight: bold;
+    }
+      
+    .imagen-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+      
+    .imagen {
+        display: block;
+        width: 70vw;
+        height: auto;
+    }
+      
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .textomisionvision{
+        color: white;
+        font-size: larger;
+        text-align: center;
+        padding: 0 2vw 0 2vw;
+    }
+      
+    .imagen-wrapper:hover .overlay {
+        opacity: 1;
+    }
+    
+    .contenedorfotonosotros{
+        background-color: #2d3799;
+        padding: 5vw 0 5vw 0;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .fotonosotros{
+        width: 80vw;
+    }
+    
+    /*-------- PROYECTOS -------*/
+    
+    .contenedorinicioproyectos{
+        display: none !important;
+    }
+
+    .contenedorinicioproyectoocultar{
+        display: flex;
+    }
+    
+    /*-------- SERVICIOS -------*/
+    
+    .contenedorinicioservicios{
+        width: 100%;
+        min-height: 85vh !important;
+        display: flex;
+        background: url("images/fondoheaderservicios.png") top center;
+        background-size: cover;
+        align-items: center;
+        justify-content: top;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: top;
+        text-align: center;
+    }
+    
+    .tituloservicios{
+        margin-top: 15vw !important;
+        color: white;
+        font-family: Montserrat;
+        font-size: 8vw !important;
+        font-weight: bold;
+        animation: slideInUp 1s ease-in-out, pulse 1.5s ease-in-out infinite 1.2s, brillo 1.5s infinite alternate;
+    }
+
+    .textoservicios{
+        color: white;
+        font-size: larger !important;
+        padding: 0 5vw 2vw 5vw;
+    }
+    
+    .tituloservicioindividual{
+        color: #ff4824;
+        font-size: large;
+        font-weight: bolder;
+        border: 2px solid #ffa912;
+        border-radius: 10vw;
+        padding: 20px 50px;
+    }
+
+    .contenedorservicios{
+        display: block;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+    }
+    
+    .contenedorimagenservicios{
+        display: none;
+    }
+    
+    .contenedorimagenserviciosocultar{
+        display: flex;
+        align-items: center !important;
+        align-content: center !important;
+        justify-content: center !important;
+        justify-items: center !important;
+    }
+    
+    .imagenservicios{
+        width: 50vw !important;
+        padding-top: 3vw !important;
+    }
+    
+    .contenedordescripcionservicios{
+        color: white;
+        font-size: large;
+        display: inline-block;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        padding: 0 3vw 0 3vw;
+    }
+    
+    .descripcionservicios{
+        font-size: larger;
+        text-align: center;
+    
+    }
+    
+    .servicios1{
+        background-color: #2d3799;
+        padding: 5vw 0 5vw 0;
+    
+    }
+    
+    .servicios2{
+        background-color: #201235;
+        padding: 5vw 0 5vw 0;
+    }
+
+    /* -------- FOOTER -------- */
+    
+    footer{
+        background-color: #201235;
+        overflow-x: hidden;
+        }
+        
+        /* .contenedoranimacionfooter{
+        /*     background-color: yellow; */
+        /* } */
+        
+    .copetonfooter{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    
+    .contenedortextofooter{
+    /*     background-color: violet; */
+        padding-top: 2vw;
+        color: #FFF4E6;
+        font-size: medium;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        
+    .contenedorredesfooter{
+    /*     background-color: tomato; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2vw 0 2vw 0;
+    }
+        
+    .redessocialesfooter{
+        height: 5vw !important;
+         margin: 0 3vw 0 3vw;
+    }
+        
     .redessocialesfooter:hover{
         filter: brightness(150%);
         transition: all 1s ease;
         cursor: pointer;
     }
     
+}
 
-/*-------- MEDIAQUERIES --------*/
 
-/* Móviles pequeños */
 
-@media (max-width: 480px){
+/*-------- LG2 (990px) --------*/
 
-    .headercontenedor{
-        padding-top: 5vw;
-    }
-
-    .menu ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        z-index: 1500;
-        justify-items: center;
-        align-items: center;
-        background-color: #201235bc;
-    }
-
-    .menu ul.show {
-        display: flex;
-    }
-
-    .menu ul li {
-        margin: 2vw;
-        width: 60vw;
-        height: 10vw;
-        justify-self: center;
-        font-size: large;
-        cursor: pointer;
-        border: 1px solid #ffa912;
-        align-content: center;
-        margin-right: 10vw;
-    }
-
-    .headercontenedor{
-        padding-top: 10vw;
-    }
-
-    .menu-icon {
-        display: block;
-        height: 10vw;
-    }
-
-    .menu-icon:hover {
-        filter: brightness(120%);
-    }
+@media (max-width: 990px) {
 
     .logomenu{
-        height: 10vw;
+        height: 40px;
+        padding: 0 2vw;
     }
-
-    .perfiles{
-        margin: 0 0 2vw 0;
-        width: 80vw;
-    }
-
-    .tarjetainicio{
-        width: 80vw;
-    }
-
-    .card-text{
-        font-size: medium;
-    }
-
-    .card-title{
-        font-size: large;
-        padding-bottom: 5vw;
-    }
-
-    .section1{
-        width: 100%;
-        min-height: 85vh;
-        
+    
+    .menu ul li {
+        height: 50px;
+        width: 15vw;
+        font-size: larger;
     }
 
     .sloganinicio{
-        font-size: 11vw;
-        margin-top: 45vw;
-    }
-    
-    .textoinicio{
-        font-size: large;
-    }
-
-    .contenedorcarrusel{
-        padding-top: 0;
-        padding-bottom: 10vw;
-    }
-
-    .contenedortextofooter{
-        font-size: small;
-        text-align: center;
-    }
-
-    .redessocialesfooter{
-        height: 10vw;
-        margin-left: 8vw;
-        margin-bottom: 5vw;
-    }
-
-    .imagen{
-        width: 95vw;
-    }
-
-    .textomisionvision{
-        font-size: small;
         padding-top: 2vw;
     }
 
-    .videoprincipalnosotros{
-        width: 80vw;
-        padding-bottom: 5vw;
+    
+    /*-------- INICIO --------*/
+    
+    .carousel-caption{
+        font-size: 2vw;
     }
 
-    .contenedortextoprincipalnosotros{
-        padding: 0 5vw 0 5vw;
-        font-size: larger;
-    } 
-}
+    .contenedorcarrusel{
+      padding-top: 0;
 
-
-/* Móviles grandes hamburguesaaaaa*/
-
-@media (min-width: 481px) and (max-width: 767px) {
-    .menu ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        z-index: 1500;
+    }
+    
+    .contenedorcardsinicio{
+        background-color: #5a58a5;
+        overflow-x: hidden;
+    }
+    
+    .contenedorcards{
         justify-items: center;
-        align-items: center;
-        background-color: #201235bc;
+        text-align: center;
+        margin: 5vw 0 5vw 0;
+        font-size: 1.5vw;
     }
-
-    .menu ul.show {
-        display: flex;
-    }
-
-    .menu ul li {
-        margin: 2vw;
+    
+    .card{
         width: 50vw;
-        justify-self: center;
-        font-size: medium;
-        padding-bottom: 4vw !important;
+        color: white;
     }
 
-    .menu-icon {
-        display: block;
-    }
-
-    .menu-icon:hover {
-        filter: brightness(120%);
-    }
-
-    .logomenu{
-        height: 6vw;
-    }
-
-    .perfiles{
-        margin: 0 0 2vw 0;
-        width: 70vw;
-    }
-
-    .tarjetainicio{
-        width: 80vw;
-
-    }
-
-    .sloganinicio{
-        font-size: 7vw;
-        margin-top: 30vw;
-    }
-    
-    .textoinicio{
-        font-size: x- large;
-    }
-
-    .imagen{
-        width: 80vw;
-    }
-
-    .videoprincipalnosotros{
-        width: 80vw;
-        padding-bottom: 5vw;
-    }
-
-    .contenedortextoprincipalnosotros{
-        padding: 0 5vw 0 5vw;
+    .card-text{
+        padding: 15px !important;
         font-size: larger;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 990px) {
-
-    .logomenu{
-        height: 5vw;
-    }
-
-    .tarjetainicio{
-        width: 70vw;
-    }
-
-    .sloganinicio{
-        font-size: 7vw;
-        margin-top: 20vw;
-    }
-    
-    .textoinicio{
-        font-size: larger;
-    }
-
-    .menu ul li {
-        font-size: medium;
-        height: 4vw;
-    }
-
-    .perfiles{
-        width: 70vw;
-    }
-
-    .imagen{
-        width: 80vw;
-    }
-
-    .videoprincipalnosotros{
-        width: 80vw;
-        padding-bottom: 5vw;
-    }
-
-    .contenedortextoprincipalnosotros{
-        padding: 0 5vw 0 5vw;
-        font-size: larger;
-    }
-}
-
-
-/* Tabletas (orientación horizontal) */
-@media (min-width: 990px) and (max-width: 1280px) {
-
-    .tarjetainicio{
-        width: 300px;
-    }
-
-    .menu ul li {
-        height: 3vw;
-        font-size: medium;
-    }
-
-    .logomenu{
-        height: 4vw;
-    }
-
-    .contenedorperfiles{
-        width: 31vw;
-        padding: 0 2vw 0 4vw;
     }
 
     .card-title{
+        font-size: x-large;
+    }
+
+    
+    
+    /*-------- NOSOTROS --------*/
+    
+    .headercontenedor2{
+        padding-top: 3vw;
+    }
+    
+    .contenedornosotros{
+        background: linear-gradient(#201235 50%, #2d3799);
+        display: flex;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+        padding: 5vw 0 5vw 0;
+    }
+    
+    .contenedorvideoprincipalnosotros{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+    }
+    
+    .videoprincipalnosotros{
+        width: 70vw;
+    }
+    
+    .contenedortextoprincipalnosotros{
+        padding: 5vw 10vw 0 10vw !important;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        padding-right: 5vw;
+        color: white;
+        font-size: large;
+        text-align: justify;
+    }
+    
+    .textoconocenos{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        color: #ffa912;
+        font-size: larger !important;
+        padding: 0 0 3vw 0;
+        z-index: 2000;
+    }
+    
+    .textoconocenos{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        color: #ffa912;
+        font-size: xx-large;
+        padding: 0 0 3vw 0;
+        z-index: 2000;
+    }
+    
+    .contenedorcardsperfiles{
+        background-color: #2d3799;
+        position: relative;
+    }
+    
+    .imagen-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+    }
+    
+    .contenedorperfiles{
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: large;
+        text-align: center;
+        padding: 0 0 5vw 0;
+    
+    }
+    
+    .card-body2{
+        background-color: #201235 !important;
+        padding-bottom: 2vw;
+    }
+    
+    .list-group-item{
+        background-color: #201235 !important;
+        color: #FFF4E6;
+    }
+    
+    .card-role{
+        font-style: italic;
         font-size: large;
     }
-}
-
-
-/* Escritorios pequeños */
-@media (min-width: 1281px) and (max-width: 1440px) {
     
-    .logomenu{
-        height: 4vw;
+    .card-text{
+        padding-bottom: 1vw;
+        padding: 0 2vw 1vw 2vw;
+    }
+    
+    .perfiles{
+        width: 50vw;
+        margin: 0 0 2vw 0;
+    }
+    
+    .contenedor {
+        padding: 0 0 5vw 0;
+        background-color: #201235;
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .contenido{
+        padding: 0 0 1vw 0;
+        color: #ff4824;
+        font-size: larger;
+        padding: 2vw 0 2vw 0;
+        font-weight: bold;
+    }
+      
+    .imagen-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+      
+    .imagen {
+        display: block;
+        width: 70vw;
+        height: auto;
+    }
+      
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .textomisionvision{
+        color: white;
+        font-size: larger;
+        text-align: center;
+        padding: 0 2vw 0 2vw;
+    }
+      
+    .imagen-wrapper:hover .overlay {
+        opacity: 1;
+    }
+    
+    .contenedorfotonosotros{
+        background-color: #2d3799;
+        padding: 5vw 0 5vw 0;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .fotonosotros{
+        width: 80vw;
+    }
+    
+    /*-------- PROYECTOS -------*/
+    
+    
+
+    
+    /*-------- SERVICIOS -------*/
+    
+    .contenedorinicioservicios{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        background: url("images/fondoheaderservicios.png") top center;
+        background-size: cover;
+        align-items: center;
+        justify-content: top;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: top;
+        text-align: center;
+    }
+    
+    .tituloservicios{
+        margin-top: 15vw;
+        color: white;
+        font-family: Montserrat;
+        font-size: 5vw;
+        font-weight: bold;
+        animation: slideInUp 1s ease-in-out, pulse 1.5s ease-in-out infinite 1.2s, brillo 1.5s infinite alternate;
+    }
+    
+    .tituloservicioindividual{
+        color: #ff4824;
+        font-size: large;
+        font-weight: bolder;
+        border: 2px solid #ffa912;
+        border-radius: 10vw;
+        padding: 20px 50px;
+    }
+    
+    
+    .textoservicios{
+        color: white;
+        font-size: 2vw;
+        padding: 0 5vw 2vw 5vw;
+    }
+    
+    .contenedorservicios{
+        display: block;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+    }
+    
+    .contenedorimagenservicios{
+        display: none;
+    }
+    
+    .contenedorimagenserviciosocultar{
+        display: flex;
+        align-items: center !important;
+        align-content: center !important;
+        justify-content: center !important;
+        justify-items: center !important;
+    }
+    
+    .imagenservicios{
+        width: 40vw;
+    }
+    
+    .contenedordescripcionservicios{
+        color: white;
+        font-size: large;
+        display: inline-block;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        padding: 0 3vw 0 3vw;
+    }
+    
+    .descripcionservicios{
+        font-size: larger;
+        text-align: center;
+    
+    }
+    
+    .servicios1{
+        background-color: #2d3799;
+        padding: 5vw 0 5vw 0;
+    
+    }
+    
+    .servicios2{
+        background-color: #201235;
+        padding: 5vw 0 5vw 0;
     }
 
-    .tarjetainicio{
-        width: 400px;
+    /* -------- FOOTER -------- */
+    
+    footer{
+        background-color: #201235;
+        overflow-x: hidden;
+        }
+        
+        /* .contenedoranimacionfooter{
+        /*     background-color: yellow; */
+        /* } */
+        
+    .copetonfooter{
+        width: 100vw;
+        overflow-x: hidden;
     }
-
-    .menu ul li {
-        height: 3vw;
+    
+    .contenedortextofooter{
+    /*     background-color: violet; */
+        padding-top: 2vw;
+        color: #FFF4E6;
         font-size: medium;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-
-    .contenedorperfiles{
-        width: 32vw;
+        
+    .contenedorredesfooter{
+    /*     background-color: tomato; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2vw 0 2vw 0;
+    }
+        
+    .redessocialesfooter{
+        height: 3vw;
+         margin: 0 3vw 0 3vw;
+    }
+        
+    .redessocialesfooter:hover{
+        filter: brightness(150%);
+        transition: all 1s ease;
+        cursor: pointer;
     }
 }
 
-/* Escritorios grandes */
-@media (min-width: 1441px) {
+
+/*-------- LG --------*/
+
+@media (min-width: 991px) {
+
+    .logomenu{
+        height: 5vw;
+        padding: 0 2vw;
+    }
+    
+    .menu ul li {
+        height: 50px;
+        width: 15vw;
+        font-size: larger;
+    }
+
+    
+    /*-------- INICIO --------*/
+    
+    .carousel-caption{
+        font-size: 2vw;
+    }
+    
+    .contenedorcardsinicio{
+        background-color: #5a58a5;
+        overflow-x: hidden;
+    }
+    
+    .contenedorcards{
+        justify-items: center;
+        text-align: center;
+        margin: 5vw 0 5vw 0;
+        font-size: 1.7vw;
+    }
+    
+    .card{
+        width: 30vw;
+        color: white;
+    }
+
+    .card-text{
+        padding: 5px !important;
+    }
+
+    .card-title{
+        font-size: larger;
+    }
+
+    
+    
+    /*-------- NOSOTROS --------*/
+    
+    .headercontenedor2{
+        padding-top: 3vw;
+    }
+    
+    .contenedornosotros{
+        background: linear-gradient(#201235 50%, #2d3799);
+        display: flex;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+        padding: 5vw 0 5vw 0;
+    }
+    
+    .contenedorvideoprincipalnosotros{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+    }
+    
+    .videoprincipalnosotros{
+        width: 50vw;
+    }
+    
+    .contenedortextoprincipalnosotros{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        padding-right: 5vw;
+        color: white;
+        font-size: larger;
+        text-align: justify;
+    }
+    
+    .textoconocenos{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        color: #ffa912;
+        font-size: larger;
+        padding: 0 0 3vw 0;
+        z-index: 2000;
+    }
+    
+    .contenedorcardsperfiles{
+        background-color: #2d3799;
+        position: relative;
+    }
+    
+    .imagen-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+    }
+    
+    .contenedorperfiles{
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: larger;
+        text-align: center;
+        padding: 0 0 5vw 0;
+    
+    }
+
+    .perfiles{
+        width: 50vw;
+
+    }
+    
+    .card-body2{
+        background-color: #201235 !important;
+        padding-bottom: 2vw;
+        font-size: x-large;
+    }
+    
+    .list-group-item{
+        background-color: #201235 !important;
+        color: #FFF4E6;
+        font-size: x-large;
+    }
+    
+    .card-role{
+        font-style: italic;
+        font-size: x-large;
+    }
+    
+    .card-text{
+        padding-bottom: 1vw;
+        padding: 0 2vw 1vw 2vw;
+    }
+
+    .card-link{
+        font-size: large;
+    }
+
+    
+    .contenedor {
+        padding: 0 0 5vw 0;
+        background-color: #201235;
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .contenido{
+        padding: 0 0 1vw 0;
+        color: #ff4824;
+        font-size: x-large;
+        padding: 2vw 0 2vw 0;
+        font-weight: bold;
+    }
+      
+    .imagen-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+      
+    .imagen {
+        display: block;
+        width: 45vw;
+        height: auto;
+    }
+      
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .textomisionvision{
+        color: white;
+        font-size: large;
+        text-align: center;
+        padding: 2vw 2vw 0 2vw;
+    }
+      
+    .imagen-wrapper:hover .overlay {
+        opacity: 1;
+    }
+    
+    .contenedorfotonosotros{
+        background-color: #2d3799;
+        padding: 5vw 0 5vw 0;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .fotonosotros{
+        width: 80vw;
+    }
+    
+    /*-------- PROYECTOS -------*/
+    
+
+    
+    /*-------- SERVICIOS -------*/
+    
+    .contenedorinicioservicios{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        background: url("images/fondoheaderservicios.png") top center;
+        background-size: cover;
+        align-items: center;
+        justify-content: top;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: top;
+        text-align: center;
+    }
+    
+    .tituloservicios{
+        margin-top: 15vw;
+        color: white;
+        font-family: Montserrat;
+        font-size: 5vw;
+        font-weight: bold;
+        animation: slideInUp 1s ease-in-out, pulse 1.5s ease-in-out infinite 1.2s, brillo 1.5s infinite alternate;
+    }
+    
+    
+    .textoservicios{
+        color: white;
+        font-size: 2vw;
+        padding: 0 5vw 2vw 5vw;
+    }
+    
+    .contenedorservicios{
+        display: block;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+    }
+    
+    .contenedorimagenservicios{
+        display: flex;
+        align-items: center !important;
+        align-content: center !important;
+        justify-content: center !important;
+        justify-items: center !important;
+    }
+    
+    .contenedorimagenserviciosocultar{
+        display: none;
+    }
+    
+    .imagenservicios{
+        width: 40vw;
+    }
+
+    .tituloservicioindividual{
+        color: #ff4824;
+        font-size: large;
+        font-weight: bolder;
+        border: 2px solid #ffa912;
+        border-radius: 10vw;
+        padding: 20px 50px;
+    }
+    
+    .contenedordescripcionservicios{
+        color: white;
+        font-size: medium;
+        display: inline-block;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        padding: 0 3vw 0 3vw;
+    }
+    
+    .descripcionservicios{
+        font-size: larger;
+        text-align: center;
+    
+    }
+    
+    .servicios1{
+        background-color: #2d3799;
+        padding: 5vw 0 5vw 0;
+    
+    }
+    
+    .servicios2{
+        background-color: #201235;
+        padding: 5vw 0 5vw 0;
+    }
+    
+    /* -------- FOOTER -------- */
+    
+    footer{
+        background-color: #201235;
+        overflow-x: hidden;
+        }
+        
+        /* .contenedoranimacionfooter{
+        /*     background-color: yellow; */
+        /* } */
+        
+    .copetonfooter{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    
+    .contenedortextofooter{
+    /*     background-color: violet; */
+        padding-top: 2vw;
+        color: #FFF4E6;
+        font-size: medium;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        
+    .contenedorredesfooter{
+    /*     background-color: tomato; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2vw 0 2vw 0;
+    }
+        
+    .redessocialesfooter{
+        height: 3vw;
+         margin: 0 3vw 0 3vw;
+    }
+        
+    .redessocialesfooter:hover{
+        filter: brightness(150%);
+        transition: all 1s ease;
+        cursor: pointer;
+    }
+
+
+}
+
+
+/*--------XL --------*/
+
+@media (min-width: 1200px) {
+
+}
+
+/*-------- XXL --------*/
+
+@media (min-width: 1400px) {
+
     .logomenu{
         height: 4vw;
+        padding: 0 2vw;
     }
+    
+    .menu ul li {
+        height: 60px;
+        width: 15vw;
+        font-size: x-large;
+    }
+
+    
+    /*-------- INICIO --------*/
+    
+    .carousel-caption{
+        font-size: 2vw;
+    }
+    
+    .contenedorcardsinicio{
+        background-color: #5a58a5;
+        overflow-x: hidden;
+    }
+    
+    .contenedorcards{
+        justify-items: center;
+        text-align: center;
+        margin: 5vw 0 5vw 0;
+        font-size: 1.7vw;
+    }
+    
+    .card{
+        width: 30vw;
+        color: white;
+    }
+
+    .card-text{
+        padding: 15px !important;
+    }
+
+    .card-title{
+        font-size: 1.7vw;
+    }
+
+    
+    
+    /*-------- NOSOTROS --------*/
+    
+    .headercontenedor2{
+        padding-top: 3vw;
+    }
+    
+    .contenedornosotros{
+        background: linear-gradient(#201235 50%, #2d3799);
+        display: flex;
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+        padding: 5vw 0 5vw 0;
+    }
+    
+    .contenedorvideoprincipalnosotros{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+    }
+    
+    .videoprincipalnosotros{
+        width: 50vw;
+    }
+    
+    .contenedortextoprincipalnosotros{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        padding-right: 5vw;
+        color: white;
+        font-size: x-large;
+        text-align: justify;
+    }
+    
+    .textoconocenos{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        color: #ffa912;
+        font-size: xx-large;
+        padding: 0 0 3vw 0;
+        z-index: 2000;
+    }
+    
+    .contenedorcardsperfiles{
+        background-color: #2d3799;
+        position: relative;
+    }
+    
+    .imagen-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+    }
+    
+    .contenedorperfiles{
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: xx-large;
+        text-align: center;
+        padding: 0 0 5vw 0;
+    
+    }
+    
+    .card-body2{
+        background-color: #201235 !important;
+        padding-bottom: 2vw;
+        font-size: x-large;
+    }
+    
+    .list-group-item{
+        background-color: #201235 !important;
+        color: #FFF4E6;
+        font-size: x-large;
+    }
+    
+    .card-role{
+        font-style: italic;
+        font-size: x-large;
+    }
+    
+    .card-text{
+        padding-bottom: 1vw;
+        padding: 0 2vw 1vw 2vw;
+    }
+
+    .card-link{
+        font-size: x-large;
+    }
+    
+    .perfiles{
+        margin: 0 0 2vw 0;
+    }
+    
+    .contenedor {
+        padding: 0 0 5vw 0;
+        background-color: #201235;
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .contenido{
+        padding: 0 0 1vw 0;
+        color: #ff4824;
+        font-size: x-large;
+        padding: 2vw 0 2vw 0;
+        font-weight: bold;
+    }
+      
+    .imagen-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+      
+    .imagen {
+        display: block;
+        width: 40vw;
+        height: auto;
+    }
+      
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .textomisionvision{
+        color: white;
+        font-size: x-large;
+        text-align: center;
+        padding: 0 2vw 0 2vw;
+    }
+      
+    .imagen-wrapper:hover .overlay {
+        opacity: 1;
+    }
+    
+    .contenedorfotonosotros{
+        background-color: #2d3799;
+        padding: 5vw 0 5vw 0;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+    
+    .fotonosotros{
+        width: 80vw;
+    }
+    
+    /*-------- PROYECTOS -------*/
+    
+
+    
+    /*-------- SERVICIOS -------*/
+    
+    .contenedorinicioservicios{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        background: url("images/fondoheaderservicios.png") top center;
+        background-size: cover;
+        align-items: center;
+        justify-content: top;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        justify-content: top;
+        text-align: center;
+    }
+    
+    .tituloservicios{
+        margin-top: 15vw;
+        color: white;
+        font-family: Montserrat;
+        font-size: 4vw;
+        font-weight: bold;
+        animation: slideInUp 1s ease-in-out, pulse 1.5s ease-in-out infinite 1.2s, brillo 1.5s infinite alternate;
+    }
+    
+    .tituloservicioindividual{
+        color: #ff4824;
+        font-size: 2vw;
+        font-weight: bolder;
+        border: 2px solid #ffa912;
+        border-radius: 10vw;
+        padding: 20px 50px;
+    }
+    
+    
+    .textoservicios{
+        color: white;
+        font-size: 2vw;
+        padding: 0 5vw 2vw 5vw;
+    }
+    
+    .contenedorservicios{
+        display: block;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+    }
+    
+    .contenedorimagenservicios{
+        display: flex;
+        align-items: center !important;
+        align-content: center !important;
+        justify-content: center !important;
+        justify-items: center !important;
+    }
+    
+    .contenedorimagenserviciosocultar{
+        display: none;
+    }
+    
+    .imagenservicios{
+        width: 40vw;
+    }
+    
+    body .contenedordescripcionservicios{
+        color: white;
+        font-size: larger !important;
+        display: inline-block;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        padding: 0 3vw 0 3vw;
+    }
+    
+    .descripcionservicios{
+        font-size: larger;
+        text-align: center;
+    
+    }
+    
+    .servicios1{
+        background-color: #2d3799;
+        padding: 5vw 0 5vw 0;
+    
+    }
+    
+    .servicios2{
+        background-color: #201235;
+        padding: 5vw 0 5vw 0;
+    }
+    
+    /* -------- FOOTER -------- */
+    
+    footer{
+        background-color: #201235;
+        overflow-x: hidden;
+        }
+        
+        /* .contenedoranimacionfooter{
+        /*     background-color: yellow; */
+        /* } */
+        
+    .copetonfooter{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    
+    .contenedortextofooter{
+    /*     background-color: violet; */
+        padding-top: 2vw;
+        color: #FFF4E6;
+        font-size: x-large;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        
+    .contenedorredesfooter{
+    /*     background-color: tomato; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2vw 0 2vw 0;
+    }
+        
+    .redessocialesfooter{
+        height: 3vw;
+         margin: 0 3vw 0 3vw;
+    }
+        
+    .redessocialesfooter:hover{
+        filter: brightness(150%);
+        transition: all 1s ease;
+        cursor: pointer;
+    }
+}
+
+
+/*-------- XXXL --------*/
+
+@media (min-width: 1260px) {
+    
+        .logomenu{
+            height: 4vw;
+            padding: 0 2vw;
+        }
+        
+        .menu ul li {
+            height: 55px;
+            width: 15vw;
+            font-size: xx-large;
+        }
+    
+        
+        /*-------- INICIO --------*/
+        
+        .carousel-caption{
+            font-size: 2vw;
+        }
+        
+        .contenedorcardsinicio{
+            background-color: #5a58a5;
+            overflow-x: hidden;
+        }
+        
+        .contenedorcards{
+            justify-items: center;
+            text-align: center;
+            margin: 5vw 0 5vw 0;
+            font-size: 1.7vw;
+        }
+        
+        .card{
+            width: 30vw;
+            color: white;
+        }
+    
+        .card-text{
+            padding: 15px !important;
+        }
+    
+        .card-title{
+            font-size: 1.7vw;
+        }
+    
+        
+        
+        /*-------- NOSOTROS --------*/
+        
+        .headercontenedor2{
+            padding-top: 3vw;
+        }
+        
+        .contenedornosotros{
+            background: linear-gradient(#201235 50%, #2d3799);
+            display: flex;
+            justify-items: center;
+            align-content: center;
+            align-items: center;
+            padding: 5vw 0 5vw 0;
+        }
+        
+        .contenedorvideoprincipalnosotros{
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            align-content: center;
+        }
+        
+        .videoprincipalnosotros{
+            width: 50vw;
+        }
+        
+        .contenedortextoprincipalnosotros{
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            align-content: center;
+            padding-right: 5vw;
+            color: white;
+            font-size: xx-large;
+            text-align: justify;
+        }
+        
+        .textoconocenos{
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            align-content: center;
+            color: #ffa912;
+            font-size: xx-large;
+            padding: 0 0 3vw 0;
+            z-index: 2000;
+        }
+        
+        .contenedorcardsperfiles{
+            background-color: #2d3799;
+            position: relative;
+        }
+        
+        .imagen-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+        
+        .contenedorperfiles{
+            display: flex;
+            justify-content: center;
+            color: white;
+            font-size: xx-large;
+            text-align: center;
+            padding: 0 0 5vw 0;
+        
+        }
+        
+        .card-body2{
+            background-color: #201235 !important;
+            padding-bottom: 2vw;
+        }
+        
+        .list-group-item{
+            background-color: #201235 !important;
+            color: #FFF4E6;
+        }
+        
+        .card-role{
+            font-style: italic;
+            font-size: xx-large;
+        }
+        
+        .card-text{
+            padding-bottom: 1vw;
+            padding: 0 2vw 1vw 2vw;
+        }
+        
+        .perfiles{
+            margin: 0 0 2vw 0;
+        }
+        
+        .contenedor {
+            padding: 0 0 5vw 0;
+            background-color: #201235;
+            text-align: center;
+            align-items: center;
+            justify-items: center;
+        }
+        
+        .contenido{
+            padding: 0 0 1vw 0;
+            color: #ff4824;
+            font-size: xx-large;
+            padding: 2vw 0 2vw 0;
+            font-weight: bold;
+        }
+          
+        .imagen-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+          
+        .imagen {
+            display: block;
+            width: 40vw;
+            height: auto;
+        }
+          
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .textomisionvision{
+            color: white;
+            font-size: xx-large;
+            text-align: center;
+            padding: 0 2vw 0 2vw;
+        }
+          
+        .imagen-wrapper:hover .overlay {
+            opacity: 1;
+        }
+        
+        .contenedorfotonosotros{
+            background-color: #2d3799;
+            padding: 5vw 0 5vw 0;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            align-content: center;
+            justify-content: center;
+        }
+        
+        .fotonosotros{
+            width: 80vw;
+        }
+        
+        /*-------- PROYECTOS -------*/
+        
+        
+        /*-------- SERVICIOS -------*/
+        
+        .contenedorinicioservicios{
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            background: url("images/fondoheaderservicios.png") top center;
+            background-size: cover;
+            align-items: center;
+            justify-content: top;
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+            align-items: center;
+            align-content: center;
+            justify-items: center;
+            justify-content: top;
+            text-align: center;
+        }
+        
+        .tituloservicios{
+            margin-top: 15vw;
+            color: white;
+            font-family: Montserrat;
+            font-size: 4vw;
+            font-weight: bold;
+            animation: slideInUp 1s ease-in-out, pulse 1.5s ease-in-out infinite 1.2s, brillo 1.5s infinite alternate;
+        }
+        
+        .tituloservicioindividual{
+            color: #ff4824;
+            font-size: 2vw;
+            font-weight: bolder;
+            border: 2px solid #ffa912;
+            border-radius: 10vw;
+            padding: 20px 50px;
+        }
+        
+        
+        .textoservicios{
+            color: white;
+            font-size: 2vw;
+            padding: 0 5vw 2vw 5vw;
+        }
+        
+        .contenedorservicios{
+            display: block;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            justify-items: center;
+        }
+        
+        .contenedorimagenservicios{
+            display: flex;
+            align-items: center !important;
+            align-content: center !important;
+            justify-content: center !important;
+            justify-items: center !important;
+        }
+        
+        .contenedorimagenserviciosocultar{
+            display: none;
+        }
+        
+        .imagenservicios{
+            width: 30vw;
+        }
+        
+        .contenedordescripcionservicios{
+            color: white;
+            font-size: xx-large !important;
+            display: inline-block;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            justify-items: center;
+            padding: 0 3vw 0 3vw;
+        }
+        
+        .descripcionservicios{
+            font-size: larger;
+            text-align: center;
+        
+        }
+        
+        .servicios1{
+            background-color: #2d3799;
+            padding: 5vw 0 5vw 0;
+        
+        }
+        
+        .servicios2{
+            background-color: #201235;
+            padding: 5vw 0 5vw 0;
+        }
+        
+        /* -------- FOOTER -------- */
+        
+        footer{
+            background-color: #201235;
+            overflow-x: hidden;
+            }
+            
+            /* .contenedoranimacionfooter{
+            /*     background-color: yellow; */
+            /* } */
+            
+        .copetonfooter{
+            width: 100vw;
+            overflow-x: hidden;
+        }
+        
+        .contenedortextofooter{
+        /*     background-color: violet; */
+            padding-top: 2vw;
+            color: #FFF4E6;
+            font-size: x-large;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            
+        .contenedorredesfooter{
+        /*     background-color: tomato; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2vw 0 2vw 0;
+        }
+            
+        .redessocialesfooter{
+            height: 3vw;
+             margin: 0 3vw 0 3vw;
+        }
+            
+        .redessocialesfooter:hover{
+            filter: brightness(150%);
+            transition: all 1s ease;
+            cursor: pointer;
+        }
 
 }
