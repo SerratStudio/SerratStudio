@@ -15,6 +15,25 @@
 
 /*-------- INDEX ANIMATION -----*/
 
+.caja1{
+    background-color: aqua;
+}
+
+.caja2{
+    background-color: yellow;
+
+}
+
+.caja3{
+    background-color: violet;
+
+}
+
+.caja4{
+    background-color: tomato;
+
+}
+
 /*-------- BARRA MENU --------*/
 
 html{
@@ -414,7 +433,8 @@ header{
     width: 80vw;
 }
 
-/*-------- PROYECTOS -------*/
+/*-------- REINICIARTE -------*/
+
 .headercontenedor3{
     background-color: #005959;
 }
@@ -469,7 +489,162 @@ header{
 }
 
 .contenedorintroduccionproyecto{
-    background-color: #ff4824;
+
+    color: #005959;
+    text-align: center;
+    font-size: xx-large;
+    padding: 3vw 5vw 3vw 5vw;
+}
+
+.tituloreiniciarte{
+    color: #005959;
+    text-align: center;
+    font-weight: bolder;
+    font-size: xx-large;
+    padding: 1vw 0 1vw 0;
+}
+
+.contenedormoodboard{
+    background-color: #fef9d5;
+    padding-bottom: 5vw;
+}
+
+.contenedorintroduccionproyecto{
+
+}
+
+.contenedorimagenesmoodboard{
+    display: flex;
+}
+
+.imagenproceso{
+    width: 50px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+  
+    .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.contenedorcontenedorbanner{
+    overflow-x: hidden;
+    margin: 0%;
+    padding: 0%;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    outline: solid 5px #fef9d5;
+}
+
+.contenedorbanner{
+    overflow-x: hidden;
+    margin: 0%;
+    padding: 0%;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.imagenbanner{
+    max-width: 100vw;
+}
+
+.contenedordescripcionlogo{
+    background-color: #ffc533;
+    padding: 50px 0 50px 0;
+    align-items: center !important;
+    align-content: center !important;
+    justify-items: center !important;
+    justify-content: center !important;
+}
+
+.textodescripcionlogo{
+    padding-left: 40px;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.cajaimagenlogo{
+    display: flex;
+    align-items: center !important;
+    align-content: center !important;
+    justify-items: center !important;
+    justify-content: center !important;
+}
+
+.imagenlogodescripcion{
+    width: 30vw;
+
+}
+
+.cajatitulovariaciones{
+    display: flex;
+    padding-bottom: 20px;
+    align-items: center !important;
+    align-content: center !important;
+    justify-items: center !important;
+    justify-content: center !important;
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cajavariacioneslogo{
+    padding: 2vw 0 2vw 0;
+    background-color: #fef9d5;
+    display: flex;
+    align-items: center !important;
+    align-content: center !important;
+    justify-items: center !important;
+    justify-content: center !important;
+
+}
+
+.imagenvariacionlogo{
+    height: 20vw;
+    outline: 1px solid #005959;
+}
+
+.contenedorcardscolores{
+    background-color: #fef9d5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cardcolores{
+    margin-bottom: 50px !important;
+    width: 400px !important;
+    text-align: center;
+}
+
+.card-body3{
+    background-color: #fef9d5 !important;
+    outline: 1px solid #002020;
+}
+
+.card-text2{
+    color: #002020;
+    font-weight: bold;
+}
+
+.card-img-top2{
+    outline: 1px solid #002020;
 }
 
 /*-------- SERVICIOS -------*/
@@ -948,7 +1123,10 @@ footer{
     }
     
     /*-------- PROYECTOS -------*/
-
+    .column {
+        flex: 100%;
+        max-width: 100%;
+      }
     
     /*-------- SERVICIOS -------*/
     
@@ -1395,6 +1573,8 @@ footer{
     .contenedorinicioproyectoocultar{
         display: flex;
     }
+
+
     
     /*-------- SERVICIOS -------*/
     
@@ -1785,7 +1965,10 @@ footer{
     
     /*-------- PROYECTOS -------*/
     
-    
+        .column {
+        flex: 50%;
+        max-width: 50%;
+      }
 
     
     /*-------- SERVICIOS -------*/
@@ -2316,7 +2499,7 @@ footer{
 
 /*-------- XXL --------*/
 
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
 
     .logomenu{
         height: 4vw;
@@ -2325,8 +2508,8 @@ footer{
     
     .menu ul li {
         height: 60px;
-        width: 15vw;
-        font-size: x-large;
+        width: 20vw !important;
+        font-size: larger !important;
     }
 
     
@@ -2687,7 +2870,7 @@ footer{
 
 /*-------- XXXL --------*/
 
-@media (min-width: 1260px) {
+@media (min-width: 2560px) {
     
         .logomenu{
             height: 4vw;
