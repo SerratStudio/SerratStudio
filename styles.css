@@ -113,7 +113,12 @@ header{
     cursor: pointer;
     border: 2px solid #ffa912;
     border-radius: 10vw;
-    align-content: center;
+    align-content: center !important;
+    align-items: center !important;
+    justify-self: center !important;
+    justify-items: center !important;
+    justify-content: center !important;
+    justify-self: center !important;
 }
 
 .menu ul li:hover:before {
@@ -561,7 +566,7 @@ header{
 }
 
 .imagenbanner{
-    max-width: 100vw;
+    max-width: 100vw !important;
 }
 
 .contenedordescripcionlogo{
@@ -592,6 +597,7 @@ header{
 
 }
 
+
 .cajatitulovariaciones{
     display: flex;
     padding-bottom: 20px;
@@ -604,9 +610,13 @@ header{
     text-align: center;
 }
 
+.cajavariacioneslogo1{
+    background: linear-gradient(#ffc533 0.5%, #ffe299) !important;
+    padding: 2vw 0 2vw 0;
+}
+
 .cajavariacioneslogo{
     padding: 2vw 0 2vw 0;
-    background-color: #fef9d5;
     display: flex;
     align-items: center !important;
     align-content: center !important;
@@ -621,7 +631,7 @@ header{
 }
 
 .contenedorcardscolores{
-    background-color: #fef9d5;
+    background: linear-gradient(#ffe299 60%, #fef9d5);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -631,6 +641,50 @@ header{
     margin-bottom: 50px !important;
     width: 400px !important;
     text-align: center;
+}
+
+.contenedorlinkmanual{
+    background-color: #fef9d5 !important;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.cajaimagenmockupmanual{
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.imagenmockupmanual{
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    max-width: 50vw !important;
+}
+
+.cajatextomanual{
+    font-size: x-large;
+    text-align: center;
+}
+
+.linkmanual{
+    color: #ff4824;
+    font-size: x-large;
+    text-align: center;
+}
+
+.linkmanual:hover{
+    cursor: pointer;
+    filter: brightness(120%);
+    transition: 2s ease;
+    
 }
 
 .card-body3{
@@ -710,6 +764,11 @@ header{
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 2vw 0 2vw 0;
+}
+
+.card-body-solucion{
+    background-color: #2FD3B4;
+    color: #002020;
 }
 
 /*-------- SERVICIOS -------*/
