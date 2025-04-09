@@ -594,9 +594,7 @@ header{
 
 .imagenlogodescripcion{
     width: 30vw;
-
 }
-
 
 .cajatitulovariaciones{
     display: flex;
@@ -717,7 +715,6 @@ header{
 
 .contendorinfotherestart{
     background-color: #2FD3B4;
-    background-color: #2FD3B4;
     align-items: center !important;
     align-content: center !important;
     justify-items: center !important;
@@ -764,11 +761,69 @@ header{
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 2vw 0 2vw 0;
+    overflow-x: hidden;
 }
 
 .card-body-solucion{
     background-color: #2FD3B4;
     color: #002020;
+}
+
+.contenedoriniciorebranding{
+    display: flex;
+    align-items: center !important;
+    align-content: center !important;
+    justify-items: center !important;
+    justify-content: center !important;
+    background-color: #fef9d5;
+}
+
+.cajatextoiniciorebranding{
+    color: #002020;
+    font-size: x-large;
+    padding: 2vw 5vw 2vw 5vw;
+    text-align: center;
+}
+
+.cajabocetos{
+    padding-bottom: 5vw !important;
+}
+
+.contenedoridentidadanterior{
+    background-color: #fef9d5;
+    display: flex;
+    padding: 3vw 0 5vw 0 !important;
+    align-items: center !important;
+    align-content: center !important;
+    justify-items: center !important;
+    justify-content: center !important;
+}
+
+.cajatextologoviejo{
+    text-align: center;
+    font-size: x-large;
+    padding-left: 10vw;
+}
+
+.cajaimagenlogoviejo{
+    display: flex;
+    align-items: center !important;
+    align-content: center !important;
+    justify-items: center !important;
+    justify-content: center !important;
+
+}
+
+.imagenlogoviejo{
+    width: 20vw;
+    box-shadow: 0 5px 20px #99967d;
+}
+
+.contenedorcardscolores2{
+    background-color: #fef9d5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 /*-------- SERVICIOS -------*/
@@ -1376,7 +1431,7 @@ footer{
     
     .imagenlogodescripcion{
         padding-top: 30px;
-        width: 50vw !important;
+        width: 60vw !important;
     
     }
     
@@ -1434,7 +1489,7 @@ footer{
         justify-content: center !important;
         text-align: center;
         font-weight: bold;
-        font-size: larger;
+        font-size: large;
         padding: 2vw 5vw 0 5vw;
     
     }
@@ -1447,7 +1502,7 @@ footer{
         justify-items: center !important;
         justify-content: center !important;
         text-align: center;
-        font-size: larger;
+        font-size: large;
         padding: 5vw 0 5vw 0;
     }
     
@@ -1483,6 +1538,52 @@ footer{
         padding: 0 2vw 0 2vw;
         font-size: medium;
     }
+
+    .contenedorlinkmanual{
+        background-color: #fef9d5 !important;
+        display: flex;
+        align-items: center;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        padding-bottom: 10vw !important;
+    }
+    
+    .cajaimagenmockupmanual{
+        display: flex;
+        align-items: center;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+    }
+    
+    body .imagenmockupmanual{
+        display: flex;
+        align-items: center;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        max-width: 85vw !important;
+    }
+    
+    .cajatextomanual{
+        font-size: large;
+        text-align: center;
+        padding-top: 2vw !important;
+    }
+    
+    .linkmanual{
+        color: #ff4824;
+        font-size: x-large;
+        text-align: center;
+    }
+    
+    .linkmanual:hover{
+        cursor: pointer;
+        filter: brightness(120%);
+        transition: 2s ease;
+        
+    }
     
     .contenedorcardssolucion{
         background-color: #fef9d5;
@@ -1490,6 +1591,54 @@ footer{
         flex-wrap: wrap;
         justify-content: space-evenly;
         padding: 2vw 0 2vw 0;
+    }
+
+    .cajatextoiniciorebranding{
+        color: #002020;
+        font-size: larger;
+        padding: 2vw 5vw 2vw 5vw;
+        text-align: center;
+    }
+    
+    .cajabocetos{
+        padding-bottom: 5vw !important;
+    }
+    
+    .contenedoridentidadanterior{
+        background-color: #fef9d5;
+        display: flex;
+        padding: 3vw 0 4vw 0 !important;
+        align-items: center !important;
+        align-content: center !important;
+        justify-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .cajatextologoviejo{
+        text-align: center;
+        font-size: larger;
+    }
+    
+    .cajaimagenlogoviejo{
+        display: flex;
+        align-items: center !important;
+        align-content: center !important;
+        justify-items: center !important;
+        justify-content: center !important;
+    
+    }
+    
+    body .imagenlogoviejo{
+        width: 55vw;
+        margin-top: 3vw;
+        box-shadow: 0 5px 20px #99967d;
+    }
+    
+    .contenedorcardscolores2{
+        background-color: #fef9d5;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
     
     /*-------- SERVICIOS -------*/
@@ -2101,6 +2250,51 @@ footer{
     .card-img-top2{
         outline: 1px solid #002020;
     }
+
+    .contenedorlinkmanual{
+        background-color: #fef9d5 !important;
+        display: flex;
+        align-items: center;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+    }
+    
+    .cajaimagenmockupmanual{
+        display: flex;
+        align-items: center;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+    }
+    
+    .imagenmockupmanual{
+        display: flex;
+        align-items: center;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        max-width: 50vw !important;
+        padding-left: 2vw;
+    }
+    
+    .cajatextomanual{
+        font-size: large;
+        text-align: center;
+    }
+    
+    .linkmanual{
+        color: #ff4824;
+        font-size: large;
+        text-align: center;
+    }
+    
+    .linkmanual:hover{
+        cursor: pointer;
+        filter: brightness(120%);
+        transition: 2s ease;
+        
+    }
     
     .cajatextoproblema{
         background-color: #2FD3B4;
@@ -2110,7 +2304,7 @@ footer{
         justify-content: center !important;
         text-align: center;
         font-weight: bold;
-        font-size: larger;
+        font-size: larger !important;
         padding: 2vw 5vw 0 5vw;
     
     }
@@ -2123,8 +2317,8 @@ footer{
         justify-items: center !important;
         justify-content: center !important;
         text-align: center;
-        font-size: larger;
-        padding: 5vw 0 5vw 0;
+        font-size: large;
+        padding: 5vw 2vw 5vw 2vw;
     }
     
     .cajagiftherestart{
@@ -2133,7 +2327,7 @@ footer{
     
     .giftherestart{
         margin-top: 40px;
-        width: 40vw;
+        width: 60vw;
         box-shadow: 0 5px 20px #002020;
     }
     
@@ -2166,6 +2360,55 @@ footer{
         justify-content: space-evenly;
         padding: 2vw 0 2vw 0;
     }
+
+    .cajatextoiniciorebranding{
+        color: #002020;
+        font-size: larger;
+        padding: 2vw 5vw 2vw 5vw;
+        text-align: center;
+    }
+    
+    .cajabocetos{
+        padding-bottom: 5vw !important;
+    }
+    
+    .contenedoridentidadanterior{
+        background-color: #fef9d5;
+        display: flex;
+        padding: 3vw 0 4vw 0 !important;
+        align-items: center !important;
+        align-content: center !important;
+        justify-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .cajatextologoviejo{
+        text-align: center;
+        font-size: larger;
+        padding-left: 4vw;
+    }
+    
+    .cajaimagenlogoviejo{
+        display: flex;
+        align-items: center !important;
+        align-content: center !important;
+        justify-items: center !important;
+        justify-content: center !important;
+    
+    }
+    
+    .imagenlogoviejo{
+        width: 30vw;
+        box-shadow: 0 5px 20px #99967d;
+    }
+    
+    .contenedorcardscolores2{
+        background-color: #fef9d5;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
 
 
     
@@ -3278,6 +3521,41 @@ footer{
     .card-img-top2{
         outline: 1px solid #002020;
     }
+
+    .cajaimagenmockupmanual{
+        display: flex;
+        align-items: center;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+    }
+    
+    .imagenmockupmanual{
+        display: flex;
+        align-items: center;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        max-width: 50vw !important;
+    }
+    
+    .cajatextomanual{
+        font-size: larger;
+        text-align: center;
+    }
+    
+    .linkmanual{
+        color: #ff4824;
+        font-size: larger !important;
+        text-align: center;
+    }
+    
+    .linkmanual:hover{
+        cursor: pointer;
+        filter: brightness(120%);
+        transition: 2s ease;
+        
+    }
     
     .cajatextoproblema{
         background-color: #2FD3B4;
@@ -3343,6 +3621,53 @@ footer{
         padding: 2vw 0 2vw 0;
     }
     
+    .cajatextoiniciorebranding{
+        color: #002020;
+        font-size: x-large;
+        padding: 2vw 5vw 2vw 5vw;
+        text-align: center;
+    }
+    
+    .cajabocetos{
+        padding-bottom: 5vw !important;
+    }
+    
+    .contenedoridentidadanterior{
+        background-color: #fef9d5;
+        display: flex;
+        padding: 3vw 0 4vw 0 !important;
+        align-items: center !important;
+        align-content: center !important;
+        justify-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .cajatextologoviejo{
+        text-align: center;
+        font-size: larger;
+        padding-left: 4vw;
+    }
+    
+    .cajaimagenlogoviejo{
+        display: flex;
+        align-items: center !important;
+        align-content: center !important;
+        justify-items: center !important;
+        justify-content: center !important;
+    
+    }
+    
+    .imagenlogoviejo{
+        width: 30vw;
+        box-shadow: 0 5px 20px #99967d;
+    }
+    
+    .contenedorcardscolores2{
+        background-color: #fef9d5;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
 
 }
 
