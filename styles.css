@@ -664,6 +664,19 @@ header{
     justify-content: center;
     padding: 5vw 0 5vw 0;
     color: white;
+} 
+
+
+
+.contenedorlinkmanual3{
+    background-color: #2FD3B4 !important;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    padding: 5vw 0 5vw 0;
+    color: white;
 }
 
 .cajaimagenmockupmanual{
@@ -994,7 +1007,7 @@ header{
   }
 
   button:hover {
-    background-color: #ff4824;
+    background-color: #ff482435;
   }
 
   @media (max-width: 480px) {
