@@ -1424,7 +1424,7 @@ footer{
     
         color: #005959;
         text-align: center;
-        font-size: larger;
+        font-size: medium !important;
         padding: 3vw 1vw 3vw 1vw !important; 
     }
     
@@ -1432,7 +1432,7 @@ footer{
         color: #005959;
         text-align: center;
         font-weight: bolder;
-        font-size: x-large;
+        font-size: medium !important;
         padding: 1vw 0 1vw 0 !important; 
     }
     
@@ -1509,7 +1509,7 @@ footer{
     
     .textodescripcionlogo{
         padding: 0;
-        font-size: larger;
+        font-size: medium !important;
         text-align: center;
     }
     
@@ -1535,7 +1535,7 @@ footer{
         align-content: center !important;
         justify-items: center !important;
         justify-content: center !important;
-        font-size: larger;
+        font-size: medium !important;
         font-weight: bold;
         text-align: center;
     }
@@ -1566,7 +1566,7 @@ footer{
     .card-text2{
         color: #002020;
         font-weight: bold;
-        font-size: medium;
+        font-size: medium !important;
     }
     
     .card-img-top2{
@@ -1581,7 +1581,7 @@ footer{
         justify-content: center !important;
         text-align: center;
         font-weight: bold;
-        font-size: large;
+        font-size: medium !important;
         padding: 2vw 5vw 0 5vw;
     
     }
@@ -1594,7 +1594,7 @@ footer{
         justify-items: center !important;
         justify-content: center !important;
         text-align: center;
-        font-size: large;
+        font-size: medium !important;
         padding: 5vw 0 5vw 0;
     }
     
@@ -1604,7 +1604,7 @@ footer{
     
     .giftherestart{
         margin-top: 40px;
-        width: 65vw !important;
+        width: 80vw !important;
         box-shadow: 0 5px 20px #002020;
     }
     
@@ -1655,18 +1655,18 @@ footer{
         align-items: center;
         justify-items: center;
         justify-content: center;
-        max-width: 85vw !important;
+        max-width: 90vw !important;
     }
     
     .cajatextomanual{
-        font-size: large;
+        font-size: medium !important;
         text-align: center;
         padding-top: 2vw !important;
     }
     
     .linkmanual{
         color: #ff4824;
-        font-size: x-large;
+        font-size: medium !important;
         text-align: center;
     }
     
@@ -1685,9 +1685,9 @@ footer{
         padding: 2vw 0 2vw 0;
     }
 
-    .cajatextoiniciorebranding{
+    body .cajatextoiniciorebranding{
         color: #002020;
-        font-size: larger;
+        font-size: medium !important;
         padding: 2vw 5vw 2vw 5vw;
         text-align: center;
     }
@@ -1708,7 +1708,7 @@ footer{
     
     .cajatextologoviejo{
         text-align: center;
-        font-size: larger;
+        font-size: medium !important;
     }
     
     .cajaimagenlogoviejo{
@@ -1721,7 +1721,13 @@ footer{
     }
     
     body .imagenlogoviejo{
-        width: 55vw;
+        width: 150vw !important;
+        margin-top: 3vw;
+        box-shadow: 0 5px 20px #99967d;
+    }
+
+    body .imagenlogoviejo2{
+        width: 70vw !important;
         margin-top: 3vw;
         box-shadow: 0 5px 20px #99967d;
     }
@@ -2371,13 +2377,13 @@ footer{
     }
     
     .cajatextomanual{
-        font-size: large;
+        font-size: large !important;
         text-align: center;
     }
     
     .linkmanual{
         color: #ff4824;
-        font-size: large;
+        font-size: large !important;
         text-align: center;
     }
     
@@ -2455,7 +2461,7 @@ footer{
 
     .cajatextoiniciorebranding{
         color: #002020;
-        font-size: larger;
+        font-size: larger !important;
         padding: 2vw 5vw 2vw 5vw;
         text-align: center;
     }
@@ -2476,7 +2482,7 @@ footer{
     
     .cajatextologoviejo{
         text-align: center;
-        font-size: larger;
+        font-size: medium !important;
         padding-left: 4vw;
     }
     
@@ -2486,12 +2492,13 @@ footer{
         align-content: center !important;
         justify-items: center !important;
         justify-content: center !important;
-    
+        padding-bottom: 5vw;
     }
     
-    .imagenlogoviejo{
-        width: 30vw;
+    body .imagenlogoviejo{
+        width: 80vw !important;
         box-shadow: 0 5px 20px #99967d;
+    
     }
     
     .contenedorcardscolores2{
@@ -3576,7 +3583,7 @@ footer{
         align-content: center !important;
         justify-items: center !important;
         justify-content: center !important;
-        font-size: xx-large;
+        font-size: x-large;
         font-weight: bold;
         text-align: center;
     }
@@ -3632,7 +3639,7 @@ footer{
     }
     
     .cajatextomanual{
-        font-size: larger;
+        font-size: larger !important;
         text-align: center;
     }
     
@@ -3715,7 +3722,7 @@ footer{
     
     .cajatextoiniciorebranding{
         color: #002020;
-        font-size: x-large;
+        font-size: larger;
         padding: 2vw 5vw 2vw 5vw;
         text-align: center;
     }
@@ -3736,7 +3743,7 @@ footer{
     
     .cajatextologoviejo{
         text-align: center;
-        font-size: larger;
+        font-size: larger !important;
         padding-left: 4vw;
     }
     
@@ -3760,6 +3767,8 @@ footer{
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
+
+    
 
 }
 
